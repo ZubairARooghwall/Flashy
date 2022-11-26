@@ -35,7 +35,7 @@ public class Database {
                Class.forName("com.mysql.cj.jdbc.Driver");
                JOptionPane.showMessageDialog(null, "class found");
            } catch (ClassNotFoundException ex) {
-               JOptionPane.showMessageDialog(null, "could not find class jdbc");
+               JOptionPane.showMessageDialog(null, "could not find class jdbc ");
                
                Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
            }

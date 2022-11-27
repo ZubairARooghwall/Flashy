@@ -23,13 +23,16 @@ import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 import javax.swing.border.EmptyBorder;
 
+
+
+
 public class TextFieldAnimation extends JTextField {
 
     private final Color animationColor = new Color(2, 175, 255);
     private final Color backgroColor = Color.WHITE;
     private final ImageIcon iconSearch;
     private final ImageIcon iconClose;
-    private final ImageIcon iconLoading;
+//    private final ImageIcon iconLoading;
     private final String hintText = "Search . . . ";
     private Timer timer;
     private boolean show;
@@ -51,8 +54,8 @@ public class TextFieldAnimation extends JTextField {
         
         iconSearch = new ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\swing\\search.png");
         iconClose = new ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\swing\\close.png");
-        iconLoading = new ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\swing\\loading.gif");
-        
+//        iconLoading = new ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\swing\\loading.gif");
+
         //check mouse
         addMouseMotionListener( new MouseMotionAdapter() {
             @Override
@@ -183,12 +186,12 @@ public class TextFieldAnimation extends JTextField {
             g2.fillRoundRect((int)location, 0, (int) (width - location), height, height, height);
             
             //create loading icon
-            int iconSize = iconLoading.getIconHeight();
+        
             //create alpha
             g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, getAlpha()));
             
             
-            g2.drawImage(iconLoading.getImage(), (int)(location + 5), (height - iconSize) / 2,  this);
+           
             
             
         }

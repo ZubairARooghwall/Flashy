@@ -33,7 +33,6 @@ public class Database {
            
            try {
                Class.forName("com.mysql.cj.jdbc.Driver");
-               JOptionPane.showMessageDialog(null, "class found");
            } catch (ClassNotFoundException ex) {
                JOptionPane.showMessageDialog(null, "could not find class jdbc ");
                
@@ -42,7 +41,7 @@ public class Database {
            
            
            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flashcard", "root", "133613");
-           JOptionPane.showMessageDialog(null, "connected");
+
            
        } catch (SQLException ex) {
            JOptionPane.showMessageDialog(null, "could not connect to database");

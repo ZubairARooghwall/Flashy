@@ -1,6 +1,6 @@
-
 package ASoftwareForLearning.swing;
 
+import java.awt.AlphaComposite;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
@@ -13,12 +13,10 @@ import java.awt.Insets;
 import java.awt.Point;
 import java.awt.RenderingHints;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import java.awt.geom.Ellipse2D;
-import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
@@ -27,17 +25,19 @@ import javax.swing.border.EmptyBorder;
 
 public class TextFieldAnimation extends JTextField {
 
-    private Color animationColor = new Color(2, 175, 255);
-    private Color backgroColor = Color.WHITE;
+    private final Color animationColor = new Color(2, 175, 255);
+    private final Color backgroColor = Color.WHITE;
     private final ImageIcon iconSearch;
     private final ImageIcon iconClose;
     private final ImageIcon iconLoading;
-    private String hintText = "Search . . . ";
+    private final String hintText = "Search . . . ";
     private Timer timer;
     private boolean show;
     private float speed = 1f;
     private float location = -1;
-    
+    private EventTextField event;
+    private EventCallBack callBack;
+    private Thread thread;
     
     
     public TextFieldAnimation() {
@@ -80,14 +80,39 @@ public class TextFieldAnimation extends JTextField {
                                 setEditable(true);
                                 show = false;
                                 location = -1;
+                                timer.start();
+                                
+                                if(thread != null){
+                                    thread.interrupt();
+                                }
+                                if(event != null){
+                                    event.onCancel();
+                                }
+                                
+                                
                             }else{
                                 setEditable(false);
                                 show = true;
                                 location = getWidth();
                                 timer.start();
+                                
+                                if(event != null){
+                                    thread = new Thread(new Runnable(){
+                                        @Override
+                                        public void run() {
+                                        event.onPressed(callBack);
+                                        
+                                        }
+                                    });
+                                    
+                                    thread.start();
+                                    
+                                }
+                                
+                                
                             }
                             
-                            
+                        
                         }
                         
                         
@@ -100,30 +125,36 @@ public class TextFieldAnimation extends JTextField {
         }
 );
         
-        timer = new Timer(-10, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-            
-                if(show){
-                        if(location > 0){
-                            location -= speed;
-                            repaint();
-                        }else{
-                            timer.stop();
-                            
-                        }
+        timer = new Timer(0, (ActionEvent e) -> {
+            if(show){
+                if(location > 0){
+                    location -= speed;
+                    repaint();
                 }else{
-                    if(location < getWidth()){
-                        location += speed;
-                        repaint();
-                    }else{
-                        timer.stop();            
-                    }        
+                    timer.stop();
+                    
+                }
+            }else{
+                if(location < getWidth()){
+                    location += speed;        
+                    repaint();
+                }else{
+                    timer.stop();
                 }
             }
         });
         
-        
+        callBack = new EventCallBack() {
+            @Override
+            public void done() {
+                setEditable(true);
+                show = false;
+                location = -1;
+                timer.start();
+            
+            }
+        };
+                
     
     }
 
@@ -154,10 +185,10 @@ public class TextFieldAnimation extends JTextField {
             //create loading icon
             int iconSize = iconLoading.getIconHeight();
             //create alpha
+            g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, getAlpha()));
             
             
-            
-            g2.drawImage(((ImageIcon) iconLoading).getImage(), (int)(location + 5), (int)(height - iconSize) / 2,  this);
+            g2.drawImage(iconLoading.getImage(), (int)(location + 5), (height - iconSize) / 2,  this);
             
             
         }
@@ -167,12 +198,12 @@ public class TextFieldAnimation extends JTextField {
         
         super.paintComponent(g); 
         
-        
+          g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 1f)); //set to default
         //create button icon
         int marginImage = 5;
         int imageSize = buttonSize - marginImage * 2;
         
-        Image image = ((ImageIcon) iconSearch).getImage();
+        Image image = iconSearch.getImage();
         g2.drawImage(image, width - height + marginImage + 3, marginButton + marginImage, imageSize, imageSize, null);
         g2.dispose();
         
@@ -187,7 +218,7 @@ public class TextFieldAnimation extends JTextField {
     @Override
     public void paint(Graphics g) {
         super.paint(g);
-        if (getText().length() == 0) {
+        if ( show == false &&  getText().length() == 0) {
             int h = getHeight();
             ((Graphics2D)g).setRenderingHint(RenderingHints.KEY_TEXT_ANTIALIASING,RenderingHints.VALUE_TEXT_ANTIALIAS_ON);
             Insets ins = getInsets();
@@ -204,7 +235,18 @@ public class TextFieldAnimation extends JTextField {
     
     private float getAlpha(){
         
-        float width = getWidth()/2 26:55
+       float width = getWidth()/2;
+       float alpha =  (location)/ (-width);
+       alpha += 1;
+       
+       if(alpha < 0){
+           alpha = 0;  
+       }
+       if(alpha > 1){
+           alpha = 1;   
+       }
+       
+       return alpha;
         
     }
     private boolean checkMouseOver(Point mouse){
@@ -220,6 +262,10 @@ public class TextFieldAnimation extends JTextField {
         return circle.contains(mouse);
     }
     
+    
+    public void addEvent(EventTextField event){
+        this.event = event;
+    }
     
     
     

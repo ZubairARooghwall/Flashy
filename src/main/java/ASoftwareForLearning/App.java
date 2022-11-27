@@ -5,6 +5,8 @@
 package ASoftwareForLearning;
 
 import ASoftwareForLearning.Database.Database;
+import ASoftwareForLearning.swing.EventCallBack;
+import ASoftwareForLearning.swing.EventTextField;
 
 /**
  *
@@ -22,8 +24,12 @@ public class App extends javax.swing.JFrame {
         
         
         
+        
+        
+        
+        
+    
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -33,15 +39,13 @@ public class App extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        textFieldAnimation1 = new ASoftwareForLearning.swing.TextFieldAnimation();
+        searchField = new ASoftwareForLearning.swing.TextFieldAnimation();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        textFieldAnimation1.setText("textFieldAnimation1");
-        textFieldAnimation1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        textFieldAnimation1.addActionListener(new java.awt.event.ActionListener() {
+        searchField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldAnimation1ActionPerformed(evt);
+                searchFieldActionPerformed(evt);
             }
         });
 
@@ -50,25 +54,25 @@ public class App extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(178, 178, 178)
-                .addComponent(textFieldAnimation1, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(380, Short.MAX_VALUE))
+                .addGap(172, 172, 172)
+                .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 368, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(260, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(163, 163, 163)
-                .addComponent(textFieldAnimation1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(396, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(553, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void textFieldAnimation1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldAnimation1ActionPerformed
+    private void searchFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_textFieldAnimation1ActionPerformed
+    }//GEN-LAST:event_searchFieldActionPerformed
 
     /**
      * @param args the command line arguments
@@ -112,6 +116,6 @@ public class App extends javax.swing.JFrame {
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private ASoftwareForLearning.swing.TextFieldAnimation textFieldAnimation1;
+    private ASoftwareForLearning.swing.TextFieldAnimation searchField;
     // End of variables declaration//GEN-END:variables
 }

@@ -28,9 +28,10 @@ dependencies {
     //This dependency is used to download mysql connector
     implementation 'mysql:mysql-connector-java:8.0.31'
     
-    //for search field
-   
-
+    //for all timing framework
+    implementation fileTree(dir: 'libraries', include: 'TimingFramework-0.55.jar')
+    implementation 'net.java.timingframework:timingframework-core:7.3.1'
+    implementation 'net.java.dev.timingframework:timingframework:1.0'
 
 
 }

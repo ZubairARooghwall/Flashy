@@ -55,8 +55,9 @@ public class TextFieldAnimation extends JTextField {
     
     
     
-    private Color animationColor = new Color(2, 175, 255);
+    private Color animationColor = new Color(0, 97, 255);
     private  Color backgroColor = Color.LIGHT_GRAY;
+    private Color searchForeground = Color.black;
     private final ImageIcon iconSearch;
     private final ImageIcon iconClose;
     private final ImageIcon iconLoading;
@@ -76,6 +77,7 @@ public class TextFieldAnimation extends JTextField {
         setBorder(new EmptyBorder(10, 10, 10, 50));
         setFont(new Font("Segoe UI", 0, 14));
         setSelectionColor(new Color(80, 199, 255));
+        setForeground(searchForeground);
         
         //icon
         
@@ -222,10 +224,10 @@ public class TextFieldAnimation extends JTextField {
         g2.fillRoundRect(0, 0, width, height, height, height);
         super.paintComponent(grphcs);
         //create button
-        
+      //  new Color(255, 255, 255)
         int marginButton = 5;
         int buttonSize = height - marginButton  * 2;
-        GradientPaint gradientPaint = new GradientPaint(0, 0, new Color(255, 255, 255), width, 0, animationColor);
+        GradientPaint gradientPaint = new GradientPaint(0, 0, new Color(96, 239, 255), width, 0, animationColor);
         g2.setPaint(gradientPaint);
         g2.fillOval(width - height + 3, marginButton, buttonSize, buttonSize);
         

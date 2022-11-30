@@ -52,22 +52,34 @@ public class App extends javax.swing.JFrame {
     private void initComponents() {
 
         panelBorder2 = new ASoftwareForLearning.swing.PanelBorder();
-        LogoPanel = new javax.swing.JPanel();
-        logoLabel = new javax.swing.JLabel();
+        logoPanel = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         textFieldAnimation1 = new ASoftwareForLearning.swing.TextFieldAnimation();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
         setUndecorated(true);
 
-        panelBorder2.setBackground(new java.awt.Color(33, 37, 42));
-        panelBorder2.setForeground(new java.awt.Color(255, 255, 255));
+        panelBorder2.setBackground(new java.awt.Color(255, 255, 255));
+        panelBorder2.setForeground(new java.awt.Color(0, 0, 0));
 
-        LogoPanel.setMaximumSize(new java.awt.Dimension(139, 40));
-        LogoPanel.setOpaque(false);
-        LogoPanel.setPreferredSize(new java.awt.Dimension(139, 40));
+        logoPanel.setMaximumSize(new java.awt.Dimension(139, 40));
+        logoPanel.setMinimumSize(new java.awt.Dimension(139, 40));
+        logoPanel.setOpaque(false);
+        logoPanel.setPreferredSize(new java.awt.Dimension(139, 40));
 
-        logoLabel.setIcon(new javax.swing.ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\Logo.png")); // NOI18N
-        logoLabel.setPreferredSize(new java.awt.Dimension(139, 40));
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\logo_Dark.png")); // NOI18N
+
+        javax.swing.GroupLayout logoPanelLayout = new javax.swing.GroupLayout(logoPanel);
+        logoPanel.setLayout(logoPanelLayout);
+        logoPanelLayout.setHorizontalGroup(
+            logoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        logoPanelLayout.setVerticalGroup(
+            logoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         textFieldAnimation1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -75,40 +87,25 @@ public class App extends javax.swing.JFrame {
             }
         });
 
-        javax.swing.GroupLayout LogoPanelLayout = new javax.swing.GroupLayout(LogoPanel);
-        LogoPanel.setLayout(LogoPanelLayout);
-        LogoPanelLayout.setHorizontalGroup(
-            LogoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LogoPanelLayout.createSequentialGroup()
-                .addComponent(logoLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72)
-                .addComponent(textFieldAnimation1, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 501, Short.MAX_VALUE))
-        );
-        LogoPanelLayout.setVerticalGroup(
-            LogoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(LogoPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(LogoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(logoLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(textFieldAnimation1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-
         javax.swing.GroupLayout panelBorder2Layout = new javax.swing.GroupLayout(panelBorder2);
         panelBorder2.setLayout(panelBorder2Layout);
         panelBorder2Layout.setHorizontalGroup(
             panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBorder2Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(LogoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 1142, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+                .addGap(16, 16, 16)
+                .addComponent(logoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(80, 80, 80)
+                .addComponent(textFieldAnimation1, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(523, Short.MAX_VALUE))
         );
         panelBorder2Layout.setVerticalGroup(
             panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBorder2Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(LogoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(601, Short.MAX_VALUE))
+                .addGap(15, 15, 15)
+                .addGroup(panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(textFieldAnimation1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(logoPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(611, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -176,8 +173,8 @@ public class App extends javax.swing.JFrame {
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel LogoPanel;
-    private javax.swing.JLabel logoLabel;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel logoPanel;
     private ASoftwareForLearning.swing.PanelBorder panelBorder2;
     private ASoftwareForLearning.swing.TextFieldAnimation textFieldAnimation1;
     // End of variables declaration//GEN-END:variables

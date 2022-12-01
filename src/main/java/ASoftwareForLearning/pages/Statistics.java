@@ -46,6 +46,8 @@ public class Statistics extends javax.swing.JPanel {
 
         panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
         panelBorder1.setForeground(new java.awt.Color(0, 0, 0));
+        panelBorder1.setMaximumSize(new java.awt.Dimension(940, 520));
+        panelBorder1.setMinimumSize(new java.awt.Dimension(940, 520));
 
         javax.swing.GroupLayout NoOfTotalCardsPanelLayout = new javax.swing.GroupLayout(NoOfTotalCardsPanel);
         NoOfTotalCardsPanel.setLayout(NoOfTotalCardsPanelLayout);

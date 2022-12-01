@@ -32,7 +32,7 @@ public class App extends javax.swing.JFrame {
         //for background and borders to be round
         setBackground(new Color(0, 0, 0, 0));
         //to make the frame movable
-      //  home2.header2.initMoving(App.this);
+        homePage2.home1.header1.initMoving(App.this);
         
         
         
@@ -64,7 +64,6 @@ public class App extends javax.swing.JFrame {
         setMaximumSize(new java.awt.Dimension(1200, 600));
         setMinimumSize(new java.awt.Dimension(1200, 600));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(1200, 600));
 
         panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -76,14 +75,14 @@ public class App extends javax.swing.JFrame {
             panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBorder1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(homePage2, javax.swing.GroupLayout.DEFAULT_SIZE, 1188, Short.MAX_VALUE)
+                .addComponent(homePage2, javax.swing.GroupLayout.PREFERRED_SIZE, 1188, Short.MAX_VALUE)
                 .addContainerGap())
         );
         panelBorder1Layout.setVerticalGroup(
             panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBorder1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(homePage2, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE)
+                .addComponent(homePage2, javax.swing.GroupLayout.PREFERRED_SIZE, 588, Short.MAX_VALUE)
                 .addContainerGap())
         );
 

@@ -110,7 +110,6 @@ public class Home extends javax.swing.JPanel {
         graph1.setBounds(0, 330, 242, 258);
 
         statistics2.setBackground(new java.awt.Color(204, 255, 204));
-        statistics2.setMaximumSize(new java.awt.Dimension(940, 520));
 
         javax.swing.GroupLayout statistics2Layout = new javax.swing.GroupLayout(statistics2);
         statistics2.setLayout(statistics2Layout);
@@ -141,7 +140,7 @@ public class Home extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private ASoftwareForLearning.component.buttonUnderWelcome buttonUnderWelcome2;
     private ASoftwareForLearning.component.Graph graph1;
-    private ASoftwareForLearning.component.Header header1;
+    public ASoftwareForLearning.component.Header header1;
     private ASoftwareForLearning.TODO.Notes notes1;
     private ASoftwareForLearning.component.RecentlyAddedQuestionsList recentlyAddedQuestionsList1;
     private ASoftwareForLearning.pages.Statistics statistics2;

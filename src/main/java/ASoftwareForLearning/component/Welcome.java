@@ -28,15 +28,67 @@ public class Welcome extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        userIcon = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        StudiedForSeconds = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        scoresToday = new javax.swing.JLabel();
+
+        setMaximumSize(new java.awt.Dimension(680, 200));
+        setMinimumSize(new java.awt.Dimension(680, 200));
+        setPreferredSize(new java.awt.Dimension(680, 200));
+
+        userIcon.setIcon(new javax.swing.ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\hello_111.png")); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Variable", 0, 24)); // NOI18N
+        jLabel1.setText("Good ");
+
+        StudiedForSeconds.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        StudiedForSeconds.setText("You have studied for xxx seconds today");
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI Variable", 0, 14)); // NOI18N
+        jLabel2.setText("You have an average of xx seconds per card");
+
+        scoresToday.setText("xxx scores today");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(userIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(26, 26, 26)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(StudiedForSeconds)
+                                    .addComponent(jLabel2))))
+                        .addContainerGap(206, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(scoresToday, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(162, 162, 162))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(29, 29, 29)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(StudiedForSeconds, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(scoresToday))
+                    .addComponent(userIcon, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(45, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -46,8 +98,8 @@ public class Welcome extends javax.swing.JPanel {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
         int w = getWidth(), h = getHeight();
-        Color color1 = new Color(20, 82, 119);
-        Color color2 = new Color(131, 208, 203);
+        Color color1 = new Color(0, 255, 135);
+        Color color2 = new Color(96, 239, 255);
         GradientPaint gp = new GradientPaint(0, 0, color1, w, h, color2);
         g2d.setPaint(gp);
         g2d.fillRoundRect(0, 0, getWidth(), getHeight(), 15, 15);
@@ -55,5 +107,10 @@ public class Welcome extends javax.swing.JPanel {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel StudiedForSeconds;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel scoresToday;
+    private javax.swing.JLabel userIcon;
     // End of variables declaration//GEN-END:variables
 }

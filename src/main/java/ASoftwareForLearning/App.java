@@ -3,12 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
-//attribute to Tempo_doloe,  Freepik,  gariebaldy, SumberRejeki, Rizki Ahmad Fauzi, alkhalifi design, KP Arts, Kiranshastry, Rizky
+//attribute to Tempo_doloe,  Freepik,  gariebaldy, SumberRejeki, Rizki Ahmad Fauzi, alkhalifi design, KP Arts, Kiranshastry, Rizky, bearicons, 
 
 package ASoftwareForLearning;
 
 import ASoftwareForLearning.Database.Database;
-import ASoftwareForLearning.component.Header;
 import ASoftwareForLearning.swing.EventCallBack;
 import ASoftwareForLearning.swing.EventTextField;
 import java.awt.Color;
@@ -32,7 +31,7 @@ public class App extends javax.swing.JFrame {
         //for background and borders to be round
         setBackground(new Color(0, 0, 0, 0));
         //to make the frame movable
-        header1.initMoving(App.this);
+      //  home2.header2.initMoving(App.this);
         
         
         
@@ -41,6 +40,8 @@ public class App extends javax.swing.JFrame {
     
     }
     
+    
+   
     
     
     
@@ -54,8 +55,7 @@ public class App extends javax.swing.JFrame {
     private void initComponents() {
 
         panelBorder2 = new ASoftwareForLearning.swing.PanelBorder();
-        header1 = new ASoftwareForLearning.component.Header();
-        welcome1 = new ASoftwareForLearning.component.Welcome();
+        home2 = new ASoftwareForLearning.pages.Home();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -67,50 +67,32 @@ public class App extends javax.swing.JFrame {
         panelBorder2.setMinimumSize(new java.awt.Dimension(1200, 600));
         panelBorder2.setPreferredSize(new java.awt.Dimension(1200, 600));
 
-        javax.swing.GroupLayout welcome1Layout = new javax.swing.GroupLayout(welcome1);
-        welcome1.setLayout(welcome1Layout);
-        welcome1Layout.setHorizontalGroup(
-            welcome1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 544, Short.MAX_VALUE)
-        );
-        welcome1Layout.setVerticalGroup(
-            welcome1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 201, Short.MAX_VALUE)
-        );
-
         javax.swing.GroupLayout panelBorder2Layout = new javax.swing.GroupLayout(panelBorder2);
         panelBorder2.setLayout(panelBorder2Layout);
         panelBorder2Layout.setHorizontalGroup(
             panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelBorder2Layout.createSequentialGroup()
-                .addGroup(panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelBorder2Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, 1222, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelBorder2Layout.createSequentialGroup()
-                        .addGap(203, 203, 203)
-                        .addComponent(welcome1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(14, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBorder2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(home2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         panelBorder2Layout.setVerticalGroup(
             panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBorder2Layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(72, 72, 72)
-                .addComponent(welcome1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(339, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(home2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelBorder2, javax.swing.GroupLayout.DEFAULT_SIZE, 1250, Short.MAX_VALUE)
+            .addComponent(panelBorder2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelBorder2, javax.swing.GroupLayout.DEFAULT_SIZE, 666, Short.MAX_VALUE)
+            .addComponent(panelBorder2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -163,8 +145,7 @@ public class App extends javax.swing.JFrame {
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private ASoftwareForLearning.component.Header header1;
+    private ASoftwareForLearning.pages.Home home2;
     private ASoftwareForLearning.swing.PanelBorder panelBorder2;
-    private ASoftwareForLearning.component.Welcome welcome1;
     // End of variables declaration//GEN-END:variables
 }

@@ -3,7 +3,7 @@ package ASoftwareForLearning.model;
 
 
 public class controlButtons {
-    static boolean maximized = false;
+    
     
     
     //for full screen

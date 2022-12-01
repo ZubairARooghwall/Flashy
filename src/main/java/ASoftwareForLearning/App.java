@@ -8,6 +8,7 @@
 package ASoftwareForLearning;
 
 import ASoftwareForLearning.Database.Database;
+import ASoftwareForLearning.component.Header;
 import ASoftwareForLearning.swing.EventCallBack;
 import ASoftwareForLearning.swing.EventTextField;
 import java.awt.Color;
@@ -30,7 +31,8 @@ public class App extends javax.swing.JFrame {
          new Database();
         //for background and borders to be round
         setBackground(new Color(0, 0, 0, 0));
-        
+        //to make the frame movable
+        header1.initMoving(App.this);
         
         
         

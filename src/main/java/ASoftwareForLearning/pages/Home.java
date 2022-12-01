@@ -34,8 +34,8 @@ public class Home extends javax.swing.JPanel {
         subjectsUnderWelcome2 = new ASoftwareForLearning.component.SubjectsUnderWelcome();
         buttonUnderWelcome2 = new ASoftwareForLearning.component.buttonUnderWelcome();
         subjectsUnderWelcome3 = new ASoftwareForLearning.component.SubjectsUnderWelcome();
-        graph2 = new ASoftwareForLearning.pages.Graph();
         recentlyAddedQuestionsList1 = new ASoftwareForLearning.component.RecentlyAddedQuestionsList();
+        graph1 = new ASoftwareForLearning.component.Graph();
 
         setMaximumSize(new java.awt.Dimension(1190, 590));
         setMinimumSize(new java.awt.Dimension(1190, 590));
@@ -44,10 +44,6 @@ public class Home extends javax.swing.JPanel {
         setLayout(null);
         add(header1);
         header1.setBounds(6, 6, 1184, 40);
-
-        welcome1.setMaximumSize(new java.awt.Dimension(650, 200));
-        welcome1.setMinimumSize(new java.awt.Dimension(650, 200));
-        welcome1.setPreferredSize(new java.awt.Dimension(650, 200));
         add(welcome1);
         welcome1.setBounds(250, 70, 650, 200);
 
@@ -59,15 +55,15 @@ public class Home extends javax.swing.JPanel {
         subjectsUnderWelcome1.setLayout(subjectsUnderWelcome1Layout);
         subjectsUnderWelcome1Layout.setHorizontalGroup(
             subjectsUnderWelcome1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 650, Short.MAX_VALUE)
         );
         subjectsUnderWelcome1Layout.setVerticalGroup(
             subjectsUnderWelcome1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 244, Short.MAX_VALUE)
+            .addGap(0, 240, Short.MAX_VALUE)
         );
 
         add(subjectsUnderWelcome1);
-        subjectsUnderWelcome1.setBounds(248, 1104, 0, 244);
+        subjectsUnderWelcome1.setBounds(248, 1104, 650, 240);
 
         notes1.setBackground(new java.awt.Color(204, 204, 255));
         notes1.setMaximumSize(new java.awt.Dimension(242, 258));
@@ -125,34 +121,34 @@ public class Home extends javax.swing.JPanel {
         add(subjectsUnderWelcome3);
         subjectsUnderWelcome3.setBounds(250, 330, 650, 260);
 
-        graph2.setBackground(new java.awt.Color(255, 204, 204));
-        graph2.setOpaque(false);
-
-        javax.swing.GroupLayout graph2Layout = new javax.swing.GroupLayout(graph2);
-        graph2.setLayout(graph2Layout);
-        graph2Layout.setHorizontalGroup(
-            graph2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 242, Short.MAX_VALUE)
-        );
-        graph2Layout.setVerticalGroup(
-            graph2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 258, Short.MAX_VALUE)
-        );
-
-        add(graph2);
-        graph2.setBounds(0, 330, 242, 258);
-
         recentlyAddedQuestionsList1.setBackground(new java.awt.Color(153, 255, 255));
         recentlyAddedQuestionsList1.setOpaque(false);
         add(recentlyAddedQuestionsList1);
         recentlyAddedQuestionsList1.setBounds(910, 70, 280, 520);
+
+        graph1.setBackground(new java.awt.Color(255, 204, 204));
+        graph1.setOpaque(false);
+
+        javax.swing.GroupLayout graph1Layout = new javax.swing.GroupLayout(graph1);
+        graph1.setLayout(graph1Layout);
+        graph1Layout.setHorizontalGroup(
+            graph1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 242, Short.MAX_VALUE)
+        );
+        graph1Layout.setVerticalGroup(
+            graph1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 258, Short.MAX_VALUE)
+        );
+
+        add(graph1);
+        graph1.setBounds(0, 330, 242, 258);
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private ASoftwareForLearning.component.buttonUnderWelcome buttonUnderWelcome1;
     private ASoftwareForLearning.component.buttonUnderWelcome buttonUnderWelcome2;
-    private ASoftwareForLearning.pages.Graph graph2;
+    private ASoftwareForLearning.component.Graph graph1;
     private ASoftwareForLearning.component.Header header1;
     private javax.swing.JSeparator jSeparator2;
     private ASoftwareForLearning.TODO.Notes notes1;

@@ -1,22 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
+
 package ASoftwareForLearning.pages;
 
-/**
- *
- * @author Zubai
- */
+import java.awt.Color;
+import java.awt.GradientPaint;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.RenderingHints;
+
+
 public class Statistics extends javax.swing.JPanel {
 
-    /**
-     * Creates new form Statistics
-     */
     public Statistics() {
         initComponents();
+        
+        
+        
+        
     }
 
+    
+   
+    
+    
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,23 +32,114 @@ public class Statistics extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelBorder1 = new ASoftwareForLearning.swing.PanelBorder();
+        NoOfTotalCardsPanel = new ASoftwareForLearning.swing.PanelBorder();
+        NoTotalReviewsPanel = new ASoftwareForLearning.swing.PanelBorder();
+        NoOfTotalNotes = new ASoftwareForLearning.swing.PanelBorder();
+        NoOfTotalTitlesAndSubjectsPanel = new ASoftwareForLearning.swing.PanelBorder();
+
+        setBackground(new java.awt.Color(255, 255, 255));
+        setForeground(new java.awt.Color(0, 0, 0));
         setMaximumSize(new java.awt.Dimension(940, 520));
         setMinimumSize(new java.awt.Dimension(940, 520));
         setName(""); // NOI18N
+
+        panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
+        panelBorder1.setForeground(new java.awt.Color(0, 0, 0));
+
+        javax.swing.GroupLayout NoOfTotalCardsPanelLayout = new javax.swing.GroupLayout(NoOfTotalCardsPanel);
+        NoOfTotalCardsPanel.setLayout(NoOfTotalCardsPanelLayout);
+        NoOfTotalCardsPanelLayout.setHorizontalGroup(
+            NoOfTotalCardsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        NoOfTotalCardsPanelLayout.setVerticalGroup(
+            NoOfTotalCardsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout NoTotalReviewsPanelLayout = new javax.swing.GroupLayout(NoTotalReviewsPanel);
+        NoTotalReviewsPanel.setLayout(NoTotalReviewsPanelLayout);
+        NoTotalReviewsPanelLayout.setHorizontalGroup(
+            NoTotalReviewsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        NoTotalReviewsPanelLayout.setVerticalGroup(
+            NoTotalReviewsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout NoOfTotalNotesLayout = new javax.swing.GroupLayout(NoOfTotalNotes);
+        NoOfTotalNotes.setLayout(NoOfTotalNotesLayout);
+        NoOfTotalNotesLayout.setHorizontalGroup(
+            NoOfTotalNotesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        NoOfTotalNotesLayout.setVerticalGroup(
+            NoOfTotalNotesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout NoOfTotalTitlesAndSubjectsPanelLayout = new javax.swing.GroupLayout(NoOfTotalTitlesAndSubjectsPanel);
+        NoOfTotalTitlesAndSubjectsPanel.setLayout(NoOfTotalTitlesAndSubjectsPanelLayout);
+        NoOfTotalTitlesAndSubjectsPanelLayout.setHorizontalGroup(
+            NoOfTotalTitlesAndSubjectsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 200, Short.MAX_VALUE)
+        );
+        NoOfTotalTitlesAndSubjectsPanelLayout.setVerticalGroup(
+            NoOfTotalTitlesAndSubjectsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout panelBorder1Layout = new javax.swing.GroupLayout(panelBorder1);
+        panelBorder1.setLayout(panelBorder1Layout);
+        panelBorder1Layout.setHorizontalGroup(
+            panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBorder1Layout.createSequentialGroup()
+                .addGap(0, 497, Short.MAX_VALUE)
+                .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(panelBorder1Layout.createSequentialGroup()
+                        .addComponent(NoOfTotalTitlesAndSubjectsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(NoOfTotalNotes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelBorder1Layout.createSequentialGroup()
+                        .addComponent(NoTotalReviewsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(NoOfTotalCardsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(37, 37, 37))
+        );
+        panelBorder1Layout.setVerticalGroup(
+            panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBorder1Layout.createSequentialGroup()
+                .addGap(77, 77, 77)
+                .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(NoTotalReviewsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NoOfTotalCardsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(NoOfTotalNotes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(NoOfTotalTitlesAndSubjectsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(237, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 940, Short.MAX_VALUE)
+            .addComponent(panelBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 520, Short.MAX_VALUE)
+            .addComponent(panelBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private ASoftwareForLearning.swing.PanelBorder NoOfTotalCardsPanel;
+    private ASoftwareForLearning.swing.PanelBorder NoOfTotalNotes;
+    private ASoftwareForLearning.swing.PanelBorder NoOfTotalTitlesAndSubjectsPanel;
+    private ASoftwareForLearning.swing.PanelBorder NoTotalReviewsPanel;
+    private ASoftwareForLearning.swing.PanelBorder panelBorder1;
     // End of variables declaration//GEN-END:variables
 }

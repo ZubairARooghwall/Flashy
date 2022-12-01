@@ -108,20 +108,6 @@ public class Home extends javax.swing.JPanel {
 
         add(graph1);
         graph1.setBounds(0, 330, 242, 258);
-
-        statistics2.setBackground(new java.awt.Color(204, 255, 204));
-
-        javax.swing.GroupLayout statistics2Layout = new javax.swing.GroupLayout(statistics2);
-        statistics2.setLayout(statistics2Layout);
-        statistics2Layout.setHorizontalGroup(
-            statistics2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 940, Short.MAX_VALUE)
-        );
-        statistics2Layout.setVerticalGroup(
-            statistics2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 520, Short.MAX_VALUE)
-        );
-
         add(statistics2);
         statistics2.setBounds(250, 70, 940, 520);
     }// </editor-fold>//GEN-END:initComponents

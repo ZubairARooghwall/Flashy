@@ -34,9 +34,9 @@ public class Welcome extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         scoresToday = new javax.swing.JLabel();
 
-        setMaximumSize(new java.awt.Dimension(680, 200));
-        setMinimumSize(new java.awt.Dimension(680, 200));
-        setPreferredSize(new java.awt.Dimension(680, 200));
+        setMaximumSize(new java.awt.Dimension(650, 200));
+        setMinimumSize(new java.awt.Dimension(650, 200));
+        setPreferredSize(new java.awt.Dimension(650, 200));
 
         userIcon.setIcon(new javax.swing.ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\hello_111.png")); // NOI18N
 

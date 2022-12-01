@@ -12,7 +12,7 @@ public class Home extends javax.swing.JPanel {
  
     public Home() {
         initComponents();
-        
+        statistics2.setVisible(false);
         
     }
 
@@ -27,15 +27,12 @@ public class Home extends javax.swing.JPanel {
 
         header1 = new ASoftwareForLearning.component.Header();
         welcome1 = new ASoftwareForLearning.component.Welcome();
-        jSeparator2 = new javax.swing.JSeparator();
-        subjectsUnderWelcome1 = new ASoftwareForLearning.component.SubjectsUnderWelcome();
         notes1 = new ASoftwareForLearning.TODO.Notes();
-        buttonUnderWelcome1 = new ASoftwareForLearning.component.buttonUnderWelcome();
-        subjectsUnderWelcome2 = new ASoftwareForLearning.component.SubjectsUnderWelcome();
         buttonUnderWelcome2 = new ASoftwareForLearning.component.buttonUnderWelcome();
         subjectsUnderWelcome3 = new ASoftwareForLearning.component.SubjectsUnderWelcome();
         recentlyAddedQuestionsList1 = new ASoftwareForLearning.component.RecentlyAddedQuestionsList();
         graph1 = new ASoftwareForLearning.component.Graph();
+        statistics2 = new ASoftwareForLearning.pages.Statistics();
 
         setMaximumSize(new java.awt.Dimension(1190, 590));
         setMinimumSize(new java.awt.Dimension(1190, 590));
@@ -46,24 +43,6 @@ public class Home extends javax.swing.JPanel {
         header1.setBounds(6, 6, 1184, 40);
         add(welcome1);
         welcome1.setBounds(250, 70, 650, 200);
-
-        jSeparator2.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        add(jSeparator2);
-        jSeparator2.setBounds(0, 1354, 48, 0);
-
-        javax.swing.GroupLayout subjectsUnderWelcome1Layout = new javax.swing.GroupLayout(subjectsUnderWelcome1);
-        subjectsUnderWelcome1.setLayout(subjectsUnderWelcome1Layout);
-        subjectsUnderWelcome1Layout.setHorizontalGroup(
-            subjectsUnderWelcome1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 650, Short.MAX_VALUE)
-        );
-        subjectsUnderWelcome1Layout.setVerticalGroup(
-            subjectsUnderWelcome1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 240, Short.MAX_VALUE)
-        );
-
-        add(subjectsUnderWelcome1);
-        subjectsUnderWelcome1.setBounds(248, 1104, 650, 240);
 
         notes1.setBackground(new java.awt.Color(204, 204, 255));
         notes1.setMaximumSize(new java.awt.Dimension(242, 258));
@@ -84,24 +63,6 @@ public class Home extends javax.swing.JPanel {
 
         add(notes1);
         notes1.setBounds(0, 70, 242, 258);
-        add(buttonUnderWelcome1);
-        buttonUnderWelcome1.setBounds(248, 796, 650, 40);
-
-        subjectsUnderWelcome2.setBackground(new java.awt.Color(0, 102, 204));
-
-        javax.swing.GroupLayout subjectsUnderWelcome2Layout = new javax.swing.GroupLayout(subjectsUnderWelcome2);
-        subjectsUnderWelcome2.setLayout(subjectsUnderWelcome2Layout);
-        subjectsUnderWelcome2Layout.setHorizontalGroup(
-            subjectsUnderWelcome2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 650, Short.MAX_VALUE)
-        );
-        subjectsUnderWelcome2Layout.setVerticalGroup(
-            subjectsUnderWelcome2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 240, Short.MAX_VALUE)
-        );
-
-        add(subjectsUnderWelcome2);
-        subjectsUnderWelcome2.setBounds(248, 846, 650, 240);
         add(buttonUnderWelcome2);
         buttonUnderWelcome2.setBounds(250, 280, 650, 40);
 
@@ -128,6 +89,11 @@ public class Home extends javax.swing.JPanel {
 
         graph1.setBackground(new java.awt.Color(255, 204, 204));
         graph1.setOpaque(false);
+        graph1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                graph1MousePressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout graph1Layout = new javax.swing.GroupLayout(graph1);
         graph1.setLayout(graph1Layout);
@@ -142,19 +108,43 @@ public class Home extends javax.swing.JPanel {
 
         add(graph1);
         graph1.setBounds(0, 330, 242, 258);
+
+        statistics2.setBackground(new java.awt.Color(204, 255, 204));
+        statistics2.setMaximumSize(new java.awt.Dimension(940, 520));
+
+        javax.swing.GroupLayout statistics2Layout = new javax.swing.GroupLayout(statistics2);
+        statistics2.setLayout(statistics2Layout);
+        statistics2Layout.setHorizontalGroup(
+            statistics2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 940, Short.MAX_VALUE)
+        );
+        statistics2Layout.setVerticalGroup(
+            statistics2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 520, Short.MAX_VALUE)
+        );
+
+        add(statistics2);
+        statistics2.setBounds(250, 70, 940, 520);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void graph1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_graph1MousePressed
+        // TODO add your handling code here:
+        welcome1.setVisible(false);
+        subjectsUnderWelcome3.setVisible(false);
+        recentlyAddedQuestionsList1.setVisible(false);
+        buttonUnderWelcome2.setVisible(false);
+        statistics2.setVisible(true);
+        
+    }//GEN-LAST:event_graph1MousePressed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private ASoftwareForLearning.component.buttonUnderWelcome buttonUnderWelcome1;
     private ASoftwareForLearning.component.buttonUnderWelcome buttonUnderWelcome2;
     private ASoftwareForLearning.component.Graph graph1;
     private ASoftwareForLearning.component.Header header1;
-    private javax.swing.JSeparator jSeparator2;
     private ASoftwareForLearning.TODO.Notes notes1;
     private ASoftwareForLearning.component.RecentlyAddedQuestionsList recentlyAddedQuestionsList1;
-    private ASoftwareForLearning.component.SubjectsUnderWelcome subjectsUnderWelcome1;
-    private ASoftwareForLearning.component.SubjectsUnderWelcome subjectsUnderWelcome2;
+    private ASoftwareForLearning.pages.Statistics statistics2;
     private ASoftwareForLearning.component.SubjectsUnderWelcome subjectsUnderWelcome3;
     private ASoftwareForLearning.component.Welcome welcome1;
     // End of variables declaration//GEN-END:variables

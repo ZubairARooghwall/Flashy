@@ -27,6 +27,7 @@ public class App extends javax.swing.JFrame {
      */
     public App() {
         initComponents();
+        this.setTitle("Flashy"); //the title for the frame
          new Database();
         //for background and borders to be round
         setBackground(new Color(0, 0, 0, 0));
@@ -54,45 +55,47 @@ public class App extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelBorder2 = new ASoftwareForLearning.swing.PanelBorder();
-        home2 = new ASoftwareForLearning.pages.Home();
+        panelBorder1 = new ASoftwareForLearning.swing.PanelBorder();
+        homePage2 = new ASoftwareForLearning.pages.HomePage();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setIconImage(new ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\logo.png").getImage());
+        setMaximumSize(new java.awt.Dimension(1200, 600));
+        setMinimumSize(new java.awt.Dimension(1200, 600));
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(1200, 600));
 
-        panelBorder2.setBackground(new java.awt.Color(255, 255, 255));
-        panelBorder2.setForeground(new java.awt.Color(0, 0, 0));
-        panelBorder2.setMaximumSize(new java.awt.Dimension(1200, 600));
-        panelBorder2.setMinimumSize(new java.awt.Dimension(1200, 600));
-        panelBorder2.setPreferredSize(new java.awt.Dimension(1200, 600));
+        panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout panelBorder2Layout = new javax.swing.GroupLayout(panelBorder2);
-        panelBorder2.setLayout(panelBorder2Layout);
-        panelBorder2Layout.setHorizontalGroup(
-            panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBorder2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(home2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        homePage2.setVisible(true);
+
+        javax.swing.GroupLayout panelBorder1Layout = new javax.swing.GroupLayout(panelBorder1);
+        panelBorder1.setLayout(panelBorder1Layout);
+        panelBorder1Layout.setHorizontalGroup(
+            panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBorder1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(homePage2, javax.swing.GroupLayout.DEFAULT_SIZE, 1188, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        panelBorder2Layout.setVerticalGroup(
-            panelBorder2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelBorder2Layout.createSequentialGroup()
+        panelBorder1Layout.setVerticalGroup(
+            panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelBorder1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(home2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(homePage2, javax.swing.GroupLayout.DEFAULT_SIZE, 588, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelBorder2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelBorder1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelBorder2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelBorder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -145,7 +148,7 @@ public class App extends javax.swing.JFrame {
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private ASoftwareForLearning.pages.Home home2;
-    private ASoftwareForLearning.swing.PanelBorder panelBorder2;
+    private ASoftwareForLearning.pages.HomePage homePage2;
+    private ASoftwareForLearning.swing.PanelBorder panelBorder1;
     // End of variables declaration//GEN-END:variables
 }

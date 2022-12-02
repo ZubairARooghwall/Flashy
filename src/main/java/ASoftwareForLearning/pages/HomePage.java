@@ -7,12 +7,7 @@ package ASoftwareForLearning.pages;
 import javax.swing.BorderFactory;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
-/**
- *
- * 
- * 
- * 
- */
+
 public class HomePage extends javax.swing.JInternalFrame {
 
     /**

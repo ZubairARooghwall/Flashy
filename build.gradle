@@ -28,8 +28,11 @@ dependencies {
     //This dependency is used to download mysql connector
     implementation 'mysql:mysql-connector-java:8.0.31'
     
+    //This dependency installs the FlatLaf theme
+    implementation 'com.formdev:flatlaf:2.6'
+    
     //for all timing framework
-    implementation fileTree(dir: 'libraries', include: 'TimingFramework-0.55.jar')
+    implementation fileTree(dir: 'libraries', include: '*.jar')
     implementation 'net.java.timingframework:timingframework-core:7.3.1'
     implementation 'net.java.dev.timingframework:timingframework:1.0'
 

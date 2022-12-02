@@ -23,7 +23,7 @@ public class TextAreaScroll extends JScrollPane {
     private float animateLocation;
     private boolean show;
     private boolean mouseOver = false;
-    private String labelText = "Label";
+    private String labelText = "Answer";
     private Color lineColor = new Color(3, 155, 216);
 
     public TextAreaScroll() {

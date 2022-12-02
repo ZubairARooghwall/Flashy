@@ -47,41 +47,79 @@ public class Input extends javax.swing.JInternalFrame {
     private void initComponents() {
 
         panelBorder1 = new ASoftwareForLearning.swing.PanelBorder();
+        textField1 = new ASoftwareForLearning.InputPageComponents.TextField();
+        header1 = new ASoftwareForLearning.component.Header();
         jLabel1 = new javax.swing.JLabel();
+        textAreaScroll1 = new ASoftwareForLearning.InputPageComponents.TextAreaScroll();
+        textArea1 = new ASoftwareForLearning.InputPageComponents.TextArea();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(1190, 590));
         setMinimumSize(new java.awt.Dimension(1190, 590));
         getContentPane().setLayout(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\maximize-size-option_40.png")); // NOI18N
+        panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
+
+        textField1.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\maximize-size-option_20.png")); // NOI18N
+
+        textAreaScroll1.setOpaque(false);
+
+        textArea1.setBackground(new java.awt.Color(255, 255, 255));
+        textArea1.setColumns(20);
+        textArea1.setForeground(new java.awt.Color(0, 0, 0));
+        textArea1.setRows(5);
+        textAreaScroll1.setViewportView(textArea1);
 
         javax.swing.GroupLayout panelBorder1Layout = new javax.swing.GroupLayout(panelBorder1);
         panelBorder1.setLayout(panelBorder1Layout);
         panelBorder1Layout.setHorizontalGroup(
             panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBorder1Layout.createSequentialGroup()
-                .addGap(990, 990, 990)
-                .addComponent(jLabel1)
-                .addContainerGap(148, Short.MAX_VALUE))
+                .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelBorder1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, 1172, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelBorder1Layout.createSequentialGroup()
+                        .addGap(64, 64, 64)
+                        .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(textField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(textAreaScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 1055, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelBorder1Layout.setVerticalGroup(
             panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBorder1Layout.createSequentialGroup()
-                .addGap(466, 466, 466)
-                .addComponent(jLabel1)
-                .addContainerGap(94, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelBorder1Layout.createSequentialGroup()
+                        .addGap(286, 286, 286)
+                        .addComponent(jLabel1))
+                    .addGroup(panelBorder1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(textAreaScroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(125, 125, 125))
         );
 
         getContentPane().add(panelBorder1);
-        panelBorder1.setBounds(0, 0, 1178, 600);
+        panelBorder1.setBounds(0, 0, 1184, 600);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private ASoftwareForLearning.component.Header header1;
     private javax.swing.JLabel jLabel1;
     private ASoftwareForLearning.swing.PanelBorder panelBorder1;
+    private ASoftwareForLearning.InputPageComponents.TextArea textArea1;
+    private ASoftwareForLearning.InputPageComponents.TextAreaScroll textAreaScroll1;
+    private ASoftwareForLearning.InputPageComponents.TextField textField1;
     // End of variables declaration//GEN-END:variables
 }

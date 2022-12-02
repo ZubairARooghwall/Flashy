@@ -33,7 +33,8 @@ public class App extends javax.swing.JFrame {
         setBackground(new Color(0, 0, 0, 0));
         //to make the frame movable
         homePage2.home1.header1.initMoving(App.this);
-        
+        //for making the input frame invisible
+        inputPage1.setVisible(false);
         
         
         
@@ -57,34 +58,24 @@ public class App extends javax.swing.JFrame {
 
         panelBorder1 = new ASoftwareForLearning.swing.PanelBorder();
         homePage2 = new ASoftwareForLearning.pages.HomePage();
+        inputPage1 = new ASoftwareForLearning.pages.InputPage();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setIconImage(new ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\logo.png").getImage());
-        setMaximumSize(new java.awt.Dimension(1200, 600));
         setMinimumSize(new java.awt.Dimension(1200, 600));
         setUndecorated(true);
 
         panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
+        panelBorder1.setLayout(null);
 
         homePage2.setVisible(true);
+        panelBorder1.add(homePage2);
+        homePage2.setBounds(10, 0, 1180, 600);
 
-        javax.swing.GroupLayout panelBorder1Layout = new javax.swing.GroupLayout(panelBorder1);
-        panelBorder1.setLayout(panelBorder1Layout);
-        panelBorder1Layout.setHorizontalGroup(
-            panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelBorder1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(homePage2, javax.swing.GroupLayout.PREFERRED_SIZE, 1188, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        panelBorder1Layout.setVerticalGroup(
-            panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelBorder1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(homePage2, javax.swing.GroupLayout.PREFERRED_SIZE, 588, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        inputPage1.setVisible(true);
+        panelBorder1.add(inputPage1);
+        inputPage1.setBounds(10, 0, 1180, 600);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -147,7 +138,8 @@ public class App extends javax.swing.JFrame {
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private ASoftwareForLearning.pages.HomePage homePage2;
+    public static ASoftwareForLearning.pages.HomePage homePage2;
+    public static ASoftwareForLearning.pages.InputPage inputPage1;
     private ASoftwareForLearning.swing.PanelBorder panelBorder1;
     // End of variables declaration//GEN-END:variables
 }

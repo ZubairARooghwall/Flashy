@@ -4,11 +4,16 @@
  */
 package ASoftwareForLearning.component;
 
+import ASoftwareForLearning.App;
+import ASoftwareForLearning.pages.HomePage;
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
 
 /**
  *
@@ -45,6 +50,17 @@ public class UserPanel extends javax.swing.JPanel {
 
         add.setIcon(new javax.swing.ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\add_Outlined.png")); // NOI18N
         add.setText("jLabel2");
+        add.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                addMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                addMouseEntered(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                addMousePressed(evt);
+            }
+        });
 
         userIcon.setIcon(new javax.swing.ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\user_40.png")); // NOI18N
 
@@ -88,6 +104,33 @@ public class UserPanel extends javax.swing.JPanel {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    
+
+        
+
+    
+    
+    private void addMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseEntered
+       
+         setCursor(new Cursor(Cursor.HAND_CURSOR));
+        
+        
+        
+    }//GEN-LAST:event_addMouseEntered
+
+    private void addMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMousePressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_addMousePressed
+
+    private void addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseClicked
+       
+        ASoftwareForLearning.App.homePage2.setVisible(false);
+        ASoftwareForLearning.App.inputPage1.setVisible(true);
+        
+        
+        
+    }//GEN-LAST:event_addMouseClicked
 
     
      @Override

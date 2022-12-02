@@ -1,5 +1,6 @@
 package ASoftwareForLearning.component;
 
+import java.awt.Cursor;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
@@ -50,8 +51,21 @@ public class Header extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(1200, 40));
         setOpaque(false);
         setPreferredSize(new java.awt.Dimension(1200, 40));
+        addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                formMouseEntered(evt);
+            }
+        });
 
         homeLabel.setIcon(new javax.swing.ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\home_Filled.png")); // NOI18N
+        homeLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                homeLabelMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                homeLabelMouseEntered(evt);
+            }
+        });
 
         settingLabel.setIcon(new javax.swing.ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\setting_Filled.png")); // NOI18N
 
@@ -116,6 +130,28 @@ public class Header extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_textFieldAnimation1ActionPerformed
 
+    private void homeLabelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeLabelMouseEntered
+        
+         setCursor(new Cursor(Cursor.HAND_CURSOR));
+        
+    }//GEN-LAST:event_homeLabelMouseEntered
+
+    private void homeLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeLabelMouseClicked
+        
+        ASoftwareForLearning.App.inputPage1.setVisible(false);
+        ASoftwareForLearning.App.homePage2.setVisible(true);
+        
+        
+    }//GEN-LAST:event_homeLabelMouseClicked
+
+    private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
+        // TODO add your handling code here:
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_formMouseEntered
+
+    
+    
+    
     
       private int x;
     private int y;

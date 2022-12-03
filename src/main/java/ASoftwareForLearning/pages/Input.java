@@ -1,9 +1,11 @@
 /*
+
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
 package ASoftwareForLearning.pages;
 
+import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
 
@@ -14,7 +16,11 @@ public class Input extends javax.swing.JInternalFrame {
     public Input() {
         initComponents();
         
-        //for internal Frame
+        addButton.setkStartColor(Color.decode("#0061ff"));
+        addButton.setkEndColor(Color.decode("#60efff"));
+        
+        
+        //for inter 
         this.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
         BasicInternalFrameUI bi  = (BasicInternalFrameUI)this.getUI();
         bi.setNorthPane(null);
@@ -48,21 +54,32 @@ public class Input extends javax.swing.JInternalFrame {
 
         panelBorder1 = new ASoftwareForLearning.swing.PanelBorder();
         textField1 = new ASoftwareForLearning.InputPageComponents.TextField();
-        header1 = new ASoftwareForLearning.component.Header();
         jLabel1 = new javax.swing.JLabel();
         textAreaScroll1 = new ASoftwareForLearning.InputPageComponents.TextAreaScroll();
         textArea1 = new ASoftwareForLearning.InputPageComponents.TextArea();
+        header1 = new ASoftwareForLearning.component.Header();
+        addButton = new ASoftwareForLearning.component.KButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
-        setMaximumSize(new java.awt.Dimension(1190, 590));
-        setMinimumSize(new java.awt.Dimension(1190, 590));
+        setMaximumSize(new java.awt.Dimension(1200, 600));
+        setMinimumSize(new java.awt.Dimension(1200, 600));
+        setNormalBounds(new java.awt.Rectangle(0, 0, 1200, 600));
+        setPreferredSize(new java.awt.Dimension(1200, 600));
         getContentPane().setLayout(null);
 
         panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
+        panelBorder1.setMaximumSize(new java.awt.Dimension(1200, 600));
+        panelBorder1.setMinimumSize(new java.awt.Dimension(1200, 600));
+        panelBorder1.setPreferredSize(new java.awt.Dimension(1200, 600));
 
         textField1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\maximize-size-option_20.png")); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
 
         textAreaScroll1.setOpaque(false);
 
@@ -72,23 +89,26 @@ public class Input extends javax.swing.JInternalFrame {
         textArea1.setRows(5);
         textAreaScroll1.setViewportView(textArea1);
 
+        addButton.setText("Add");
+
         javax.swing.GroupLayout panelBorder1Layout = new javax.swing.GroupLayout(panelBorder1);
         panelBorder1.setLayout(panelBorder1Layout);
         panelBorder1Layout.setHorizontalGroup(
             panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBorder1Layout.createSequentialGroup()
-                .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelBorder1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, 1172, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelBorder1Layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
+                .addGap(64, 64, 64)
+                .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel1)
                         .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(textField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(textAreaScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 1055, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel1)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(textAreaScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 1055, Short.MAX_VALUE))))
+                .addContainerGap(81, Short.MAX_VALUE))
+            .addGroup(panelBorder1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addContainerGap())
         );
         panelBorder1Layout.setVerticalGroup(
             panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -97,24 +117,30 @@ public class Input extends javax.swing.JInternalFrame {
                 .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
                 .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelBorder1Layout.createSequentialGroup()
-                        .addGap(286, 286, 286)
-                        .addComponent(jLabel1))
-                    .addGroup(panelBorder1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(textAreaScroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(125, 125, 125))
+                .addGap(18, 18, 18)
+                .addComponent(textAreaScroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addGap(15, 15, 15)
+                .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(56, 56, 56))
         );
 
         getContentPane().add(panelBorder1);
-        panelBorder1.setBounds(0, 0, 1184, 600);
-
-        pack();
+        panelBorder1.setBounds(0, 0, 1200, 600);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        // TODO add your handling code here:
+        
+        InputQuestionsFrame frame = new InputQuestionsFrame();
+        
+        
+    }//GEN-LAST:event_jLabel1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private ASoftwareForLearning.component.KButton addButton;
     private ASoftwareForLearning.component.Header header1;
     private javax.swing.JLabel jLabel1;
     private ASoftwareForLearning.swing.PanelBorder panelBorder1;

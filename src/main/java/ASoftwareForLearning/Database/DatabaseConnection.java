@@ -1,4 +1,3 @@
-
 package ASoftwareForLearning.Database;
 
 import java.sql.Connection;
@@ -12,14 +11,14 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 
-public class Database {
+public class DatabaseConnection {
    Connection connection;
     DriverManager driverManager;
     ResultSet resultSet;
     Statement statement;
     PreparedStatement preparedStatement;
 
-    public Database() {
+    public DatabaseConnection() {
         connectToDatabase();
         
         
@@ -36,7 +35,7 @@ public class Database {
            } catch (ClassNotFoundException ex) {
                JOptionPane.showMessageDialog(null, "could not find class jdbc ");
                
-               Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+               Logger.getLogger(DatabaseConnection.class.getName()).log(Level.SEVERE, null, ex);
            }
            
            
@@ -45,7 +44,7 @@ public class Database {
            
        } catch (SQLException ex) {
            JOptionPane.showMessageDialog(null, "could not connect to database");
-           Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+           Logger.getLogger(DatabaseConnection.class.getName()).log(Level.SEVERE, null, ex);
            
        }
         

@@ -14,6 +14,7 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -59,6 +60,9 @@ public class UserPanel extends javax.swing.JPanel {
             }
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 addMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                addMouseReleased(evt);
             }
         });
 
@@ -121,16 +125,24 @@ public class UserPanel extends javax.swing.JPanel {
 
     private void addMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMousePressed
         // TODO add your handling code here:
+        add.setIcon(new ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\add_Filled.png"));
+        
     }//GEN-LAST:event_addMousePressed
 
     private void addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseClicked
        
-        ASoftwareForLearning.App.homePage2.setVisible(false);
-        ASoftwareForLearning.App.inputPage1.setVisible(true);
-        
-        
+        ASoftwareForLearning.App.homePage1.setVisible(false);
+       ASoftwareForLearning.App.input1.setVisible(true);
+      
+       
         
     }//GEN-LAST:event_addMouseClicked
+
+    private void addMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseReleased
+        // TODO add your handling code here:
+        add.setIcon(new ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\add_Outlined.png"));
+        
+    }//GEN-LAST:event_addMouseReleased
 
     
      @Override

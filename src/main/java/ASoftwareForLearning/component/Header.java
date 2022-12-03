@@ -4,6 +4,8 @@ import java.awt.Cursor;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 
 /**
@@ -31,10 +33,10 @@ public class Header extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         homeLabel = new javax.swing.JLabel();
         settingLabel = new javax.swing.JLabel();
-        textFieldAnimation1 = new ASoftwareForLearning.swing.TextFieldAnimation();
         panelMoving = new javax.swing.JPanel();
         logoLabel = new javax.swing.JLabel();
-        userPanel2 = new ASoftwareForLearning.component.UserPanel();
+        textFieldAnimation1 = new ASoftwareForLearning.swing.TextFieldAnimation();
+        userPanel1 = new ASoftwareForLearning.component.UserPanel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -65,13 +67,21 @@ public class Header extends javax.swing.JPanel {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 homeLabelMouseEntered(evt);
             }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                homeLabelMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                homeLabelMouseReleased(evt);
+            }
         });
 
         settingLabel.setIcon(new javax.swing.ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\setting_Filled.png")); // NOI18N
-
-        textFieldAnimation1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                textFieldAnimation1ActionPerformed(evt);
+        settingLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                settingLabelMousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                settingLabelMouseReleased(evt);
             }
         });
 
@@ -101,14 +111,14 @@ public class Header extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(panelMoving, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
-                .addComponent(textFieldAnimation1, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(127, 127, 127)
+                .addGap(104, 104, 104)
+                .addComponent(textFieldAnimation1, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 117, Short.MAX_VALUE)
                 .addComponent(homeLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(settingLabel)
-                .addGap(104, 104, 104)
-                .addComponent(userPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 221, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(75, 75, 75)
+                .addComponent(userPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -116,12 +126,12 @@ public class Header extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(textFieldAnimation1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(panelMoving, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(homeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(settingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(textFieldAnimation1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(userPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(settingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(userPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -138,16 +148,40 @@ public class Header extends javax.swing.JPanel {
 
     private void homeLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeLabelMouseClicked
         
-        ASoftwareForLearning.App.inputPage1.setVisible(false);
-        ASoftwareForLearning.App.homePage2.setVisible(true);
-        
-        
+       ASoftwareForLearning.App.input1.setVisible(false);
+        ASoftwareForLearning.App.homePage1.setVisible(true);
+         
     }//GEN-LAST:event_homeLabelMouseClicked
 
     private void formMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMouseEntered
         // TODO add your handling code here:
         setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
     }//GEN-LAST:event_formMouseEntered
+
+    private void homeLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeLabelMousePressed
+        // TODO add your handling code here:
+        
+        ImageIcon homefilled = new ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\home_Outlined.png");
+        homeLabel.setIcon(homefilled);
+        
+    }//GEN-LAST:event_homeLabelMousePressed
+
+    private void homeLabelMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeLabelMouseReleased
+        // TODO add your handling code here:
+        homeLabel.setIcon(new ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\home_Filled.png"));
+        
+        
+    }//GEN-LAST:event_homeLabelMouseReleased
+
+    private void settingLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabelMousePressed
+        // TODO add your handling code here:
+        settingLabel.setIcon(new ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\setting_OutlineFilled.png"));
+    }//GEN-LAST:event_settingLabelMousePressed
+
+    private void settingLabelMouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_settingLabelMouseReleased
+        // TODO add your handling code here:
+        settingLabel.setIcon(new ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\setting_Filled.png"));
+    }//GEN-LAST:event_settingLabelMouseReleased
 
     
     
@@ -183,6 +217,6 @@ public class Header extends javax.swing.JPanel {
     private javax.swing.JPanel panelMoving;
     private javax.swing.JLabel settingLabel;
     private ASoftwareForLearning.swing.TextFieldAnimation textFieldAnimation1;
-    private ASoftwareForLearning.component.UserPanel userPanel2;
+    private ASoftwareForLearning.component.UserPanel userPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -50,14 +50,14 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="panelMoving" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="89" max="32767" attributes="0"/>
-              <Component id="textFieldAnimation1" min="-2" pref="422" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="127" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
+              <Component id="textFieldAnimation1" min="-2" pref="417" max="-2" attributes="0"/>
+              <EmptySpace pref="117" max="32767" attributes="0"/>
               <Component id="homeLabel" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Component id="settingLabel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="104" max="-2" attributes="0"/>
-              <Component id="userPanel2" min="-2" pref="221" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+              <Component id="userPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -67,14 +67,14 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="textFieldAnimation1" alignment="1" min="-2" pref="40" max="-2" attributes="0"/>
                       <Component id="panelMoving" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="homeLabel" min="-2" pref="40" max="-2" attributes="0"/>
                           <Component id="settingLabel" alignment="0" min="-2" pref="40" max="-2" attributes="0"/>
-                          <Component id="textFieldAnimation1" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Component id="userPanel2" min="-2" max="-2" attributes="0"/>
+                  <Component id="userPanel1" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
@@ -91,6 +91,8 @@
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="homeLabelMouseClicked"/>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="homeLabelMouseEntered"/>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="homeLabelMousePressed"/>
+        <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="homeLabelMouseReleased"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="settingLabel">
@@ -99,10 +101,9 @@
           <Image iconType="2" name="C:\Projects\UniversityProject\ASoftwareForLearning\app\src\main\java\ASoftwareForLearning\icon\setting_Filled.png"/>
         </Property>
       </Properties>
-    </Component>
-    <Component class="ASoftwareForLearning.swing.TextFieldAnimation" name="textFieldAnimation1">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="textFieldAnimation1ActionPerformed"/>
+        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="settingLabelMousePressed"/>
+        <EventHandler event="mouseReleased" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="settingLabelMouseReleased"/>
       </Events>
     </Component>
     <Container class="javax.swing.JPanel" name="panelMoving">
@@ -144,7 +145,9 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="ASoftwareForLearning.component.UserPanel" name="userPanel2">
+    <Component class="ASoftwareForLearning.swing.TextFieldAnimation" name="textFieldAnimation1">
+    </Component>
+    <Component class="ASoftwareForLearning.component.UserPanel" name="userPanel1">
     </Component>
   </SubComponents>
 </Form>

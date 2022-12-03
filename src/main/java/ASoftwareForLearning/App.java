@@ -7,7 +7,7 @@
 
 package ASoftwareForLearning;
 
-import ASoftwareForLearning.Database.Database;
+import ASoftwareForLearning.Database.DatabaseConnection;
 import ASoftwareForLearning.swing.EventCallBack;
 import ASoftwareForLearning.swing.EventTextField;
 import java.awt.Color;
@@ -28,13 +28,13 @@ public class App extends javax.swing.JFrame {
     public App() {
         initComponents();
         this.setTitle("Flashy"); //the title for the frame
-         new Database();
+         new DatabaseConnection();
         //for background and borders to be round
         setBackground(new Color(0, 0, 0, 0));
         //to make the frame movable
-        homePage2.home1.header1.initMoving(App.this);
-        //for making the input frame invisible
-        inputPage1.setVisible(false);
+       // homePage2.home1.header1.initMoving(App.this);
+        //for making the input invisible
+        input1.setVisible(false);
         
         
         
@@ -56,37 +56,23 @@ public class App extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        panelBorder1 = new ASoftwareForLearning.swing.PanelBorder();
-        homePage2 = new ASoftwareForLearning.pages.HomePage();
-        inputPage1 = new ASoftwareForLearning.pages.InputPage();
+        homePage1 = new ASoftwareForLearning.pages.HomePage();
+        input1 = new ASoftwareForLearning.pages.Input();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
         setIconImage(new ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\logo.png").getImage());
         setMinimumSize(new java.awt.Dimension(1200, 600));
         setUndecorated(true);
+        getContentPane().setLayout(null);
 
-        panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
-        panelBorder1.setLayout(null);
+        homePage1.setVisible(true);
+        getContentPane().add(homePage1);
+        homePage1.setBounds(0, 0, 1200, 600);
 
-        homePage2.setVisible(true);
-        panelBorder1.add(homePage2);
-        homePage2.setBounds(10, 0, 1180, 600);
-
-        inputPage1.setVisible(true);
-        panelBorder1.add(inputPage1);
-        inputPage1.setBounds(10, 0, 1180, 600);
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelBorder1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelBorder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        input1.setVisible(true);
+        getContentPane().add(input1);
+        input1.setBounds(0, 0, 1200, 590);
 
         pack();
         setLocationRelativeTo(null);
@@ -138,8 +124,7 @@ public class App extends javax.swing.JFrame {
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public static ASoftwareForLearning.pages.HomePage homePage2;
-    public static ASoftwareForLearning.pages.InputPage inputPage1;
-    private ASoftwareForLearning.swing.PanelBorder panelBorder1;
+    public static ASoftwareForLearning.pages.HomePage homePage1;
+    public static ASoftwareForLearning.pages.Input input1;
     // End of variables declaration//GEN-END:variables
 }

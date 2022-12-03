@@ -5,6 +5,7 @@
 package ASoftwareForLearning.component;
 
 import java.awt.Color;
+import java.awt.Cursor;
 import java.awt.GradientPaint;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -21,6 +22,21 @@ public class buttonUnderWelcome extends javax.swing.JPanel {
      */
     public buttonUnderWelcome() {
         initComponents();
+        
+        QuestionsUnderWelcome.setkStartColor(new Color(66, 4, 126));
+        QuestionsUnderWelcome.setkEndColor(new Color(7, 244, 158));
+        
+         TitlesUnderWelcome.setkStartColor(new Color(66, 4, 126));
+        TitlesUnderWelcome.setkEndColor(new Color(7, 244, 158));
+        
+         SubjectsUnderWelcome.setkStartColor(new Color(66, 4, 126));
+        SubjectsUnderWelcome.setkEndColor(new Color(7, 244, 158));
+        
+        QuestionsUnderWelcome.setkForeGround(Color.white);
+        
+        
+        
+        
     }
 
     /**
@@ -32,9 +48,9 @@ public class buttonUnderWelcome extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        QuestionsUnderWelcome = new javax.swing.JButton();
-        TitlesUnderWelcome = new javax.swing.JButton();
-        SubjectsUnderWelcome = new javax.swing.JButton();
+        QuestionsUnderWelcome = new ASoftwareForLearning.component.KButton();
+        TitlesUnderWelcome = new ASoftwareForLearning.component.KButton();
+        SubjectsUnderWelcome = new ASoftwareForLearning.component.KButton();
 
         setMaximumSize(new java.awt.Dimension(650, 40));
         setMinimumSize(new java.awt.Dimension(650, 40));
@@ -42,20 +58,29 @@ public class buttonUnderWelcome extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(650, 40));
 
         QuestionsUnderWelcome.setText("Questions");
-        QuestionsUnderWelcome.setToolTipText("");
-        QuestionsUnderWelcome.setMaximumSize(new java.awt.Dimension(200, 30));
-        QuestionsUnderWelcome.setMinimumSize(new java.awt.Dimension(200, 30));
-        QuestionsUnderWelcome.setPreferredSize(new java.awt.Dimension(200, 30));
+        QuestionsUnderWelcome.setFont(new java.awt.Font("Segoe UI Variable", 0, 12)); // NOI18N
+        QuestionsUnderWelcome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                QuestionsUnderWelcomeMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                QuestionsUnderWelcomeMouseEntered(evt);
+            }
+        });
 
         TitlesUnderWelcome.setText("Titles");
-        TitlesUnderWelcome.setMaximumSize(new java.awt.Dimension(200, 30));
-        TitlesUnderWelcome.setMinimumSize(new java.awt.Dimension(200, 30));
-        TitlesUnderWelcome.setPreferredSize(new java.awt.Dimension(200, 30));
+        TitlesUnderWelcome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                TitlesUnderWelcomeMouseEntered(evt);
+            }
+        });
 
         SubjectsUnderWelcome.setText("Subjects");
-        SubjectsUnderWelcome.setMaximumSize(new java.awt.Dimension(200, 30));
-        SubjectsUnderWelcome.setMinimumSize(new java.awt.Dimension(200, 30));
-        SubjectsUnderWelcome.setPreferredSize(new java.awt.Dimension(200, 30));
+        SubjectsUnderWelcome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                SubjectsUnderWelcomeMouseEntered(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -63,25 +88,57 @@ public class buttonUnderWelcome extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(QuestionsUnderWelcome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(TitlesUnderWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addComponent(QuestionsUnderWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                .addComponent(TitlesUnderWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38)
                 .addComponent(SubjectsUnderWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(SubjectsUnderWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(TitlesUnderWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(QuestionsUnderWelcome, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(SubjectsUnderWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(TitlesUnderWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(QuestionsUnderWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(7, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void QuestionsUnderWelcomeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuestionsUnderWelcomeMouseEntered
+        // TODO add your handling code here:
+        
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+        
+    }//GEN-LAST:event_QuestionsUnderWelcomeMouseEntered
+
+    private void TitlesUnderWelcomeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_TitlesUnderWelcomeMouseEntered
+        // TODO add your handling code here:
+        
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+        
+    }//GEN-LAST:event_TitlesUnderWelcomeMouseEntered
+
+    private void SubjectsUnderWelcomeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SubjectsUnderWelcomeMouseEntered
+        // TODO add your handling code here:
+        
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+        
+    }//GEN-LAST:event_SubjectsUnderWelcomeMouseEntered
+
+    private void QuestionsUnderWelcomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuestionsUnderWelcomeMouseClicked
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_QuestionsUnderWelcomeMouseClicked
+
+    
+    
+    
+    
 
       @Override
     protected void paintComponent(Graphics grphcs) {
@@ -98,8 +155,8 @@ public class buttonUnderWelcome extends javax.swing.JPanel {
     
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton QuestionsUnderWelcome;
-    private javax.swing.JButton SubjectsUnderWelcome;
-    private javax.swing.JButton TitlesUnderWelcome;
+    private ASoftwareForLearning.component.KButton QuestionsUnderWelcome;
+    private ASoftwareForLearning.component.KButton SubjectsUnderWelcome;
+    private ASoftwareForLearning.component.KButton TitlesUnderWelcome;
     // End of variables declaration//GEN-END:variables
 }

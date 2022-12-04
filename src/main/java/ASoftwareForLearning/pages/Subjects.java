@@ -4,6 +4,9 @@
  */
 package ASoftwareForLearning.pages;
 
+import java.awt.Color;
+import java.awt.Font;
+
 /**
  *
  * @author Zubai
@@ -15,6 +18,14 @@ public class Subjects extends javax.swing.JPanel {
      */
     public Subjects() {
         initComponents();
+        
+        
+        
+         SubjectsTable.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 12));
+        SubjectsTable.setOpaque(false);
+        SubjectsTable.getTableHeader().setBackground(Color.decode("#103783"));
+        SubjectsTable.getTableHeader().setForeground(new Color(0, 0, 0));
+        SubjectsTable.setRowHeight(25);
     }
 
     /**
@@ -30,9 +41,14 @@ public class Subjects extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         SubjectsTable = new javax.swing.JTable();
 
-        setMaximumSize(new java.awt.Dimension(940, 520));
-        setMinimumSize(new java.awt.Dimension(940, 520));
+        setMaximumSize(new java.awt.Dimension(910, 520));
+        setMinimumSize(new java.awt.Dimension(910, 520));
+        setPreferredSize(new java.awt.Dimension(910, 520));
 
+        panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
+
+        SubjectsTable.setBackground(new java.awt.Color(255, 255, 255));
+        SubjectsTable.setForeground(new java.awt.Color(0, 0, 0));
         SubjectsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -44,6 +60,9 @@ public class Subjects extends javax.swing.JPanel {
                 "Subject Name", "Date Created", "No of Titles"
             }
         ));
+        SubjectsTable.setSelectionBackground(new java.awt.Color(0, 97, 255));
+        SubjectsTable.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        SubjectsTable.setShowHorizontalLines(true);
         jScrollPane1.setViewportView(SubjectsTable);
 
         javax.swing.GroupLayout panelBorder1Layout = new javax.swing.GroupLayout(panelBorder1);
@@ -52,7 +71,7 @@ public class Subjects extends javax.swing.JPanel {
             panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBorder1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 928, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 898, Short.MAX_VALUE)
                 .addContainerGap())
         );
         panelBorder1Layout.setVerticalGroup(
@@ -67,7 +86,7 @@ public class Subjects extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelBorder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

@@ -13,7 +13,9 @@ public class Home extends javax.swing.JPanel {
     public Home() {
         initComponents();
         statistics1.setVisible(false);
-        
+        questions1.setVisible(false);
+        subjects1.setVisible(false);
+        titles1.setVisible(false);
     }
 
     /**
@@ -30,6 +32,9 @@ public class Home extends javax.swing.JPanel {
         graph1 = new ASoftwareForLearning.component.Graph();
         homePanel2 = new ASoftwareForLearning.component.HomePanel();
         statistics1 = new ASoftwareForLearning.pages.Statistics();
+        questions1 = new ASoftwareForLearning.pages.Questions();
+        subjects1 = new ASoftwareForLearning.pages.Subjects();
+        titles1 = new ASoftwareForLearning.pages.Titles();
 
         setMaximumSize(new java.awt.Dimension(1190, 590));
         setMinimumSize(new java.awt.Dimension(1190, 590));
@@ -83,6 +88,29 @@ public class Home extends javax.swing.JPanel {
         homePanel2.setBounds(270, 60, 910, 520);
         add(statistics1);
         statistics1.setBounds(270, 60, 910, 520);
+
+        questions1.setBackground(new java.awt.Color(255, 255, 255));
+        questions1.setMaximumSize(new java.awt.Dimension(910, 520));
+        questions1.setMinimumSize(new java.awt.Dimension(910, 520));
+        questions1.setPreferredSize(new java.awt.Dimension(910, 520));
+        add(questions1);
+        questions1.setBounds(270, 60, 910, 520);
+
+        subjects1.setBackground(new java.awt.Color(255, 255, 255));
+        subjects1.setForeground(new java.awt.Color(0, 0, 0));
+        subjects1.setMaximumSize(new java.awt.Dimension(910, 520));
+        subjects1.setMinimumSize(new java.awt.Dimension(910, 520));
+        subjects1.setPreferredSize(new java.awt.Dimension(910, 520));
+        add(subjects1);
+        subjects1.setBounds(270, 60, 910, 520);
+
+        titles1.setBackground(new java.awt.Color(255, 255, 255));
+        titles1.setForeground(new java.awt.Color(0, 0, 0));
+        titles1.setMaximumSize(new java.awt.Dimension(910, 520));
+        titles1.setMinimumSize(new java.awt.Dimension(910, 520));
+        titles1.setPreferredSize(new java.awt.Dimension(910, 520));
+        add(titles1);
+        titles1.setBounds(270, 60, 910, 520);
     }// </editor-fold>//GEN-END:initComponents
 
     private void graph1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_graph1MousePressed
@@ -94,6 +122,9 @@ public class Home extends javax.swing.JPanel {
 
     private void graph1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_graph1MouseClicked
         // TODO add your handling code here:
+        titles1.setVisible(false);
+        subjects1.setVisible(false);
+        questions1.setVisible(false);
         homePanel2.setVisible(false);
         statistics1.setVisible(true);
     }//GEN-LAST:event_graph1MouseClicked
@@ -107,6 +138,9 @@ public class Home extends javax.swing.JPanel {
     private ASoftwareForLearning.component.Header header1;
     public static ASoftwareForLearning.component.HomePanel homePanel2;
     private ASoftwareForLearning.TODO.Notes notes1;
+    public static ASoftwareForLearning.pages.Questions questions1;
     public static ASoftwareForLearning.pages.Statistics statistics1;
+    public static ASoftwareForLearning.pages.Subjects subjects1;
+    public static ASoftwareForLearning.pages.Titles titles1;
     // End of variables declaration//GEN-END:variables
 }

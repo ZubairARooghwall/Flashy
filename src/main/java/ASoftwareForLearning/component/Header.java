@@ -148,8 +148,13 @@ public class Header extends javax.swing.JPanel {
 
     private void homeLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_homeLabelMouseClicked
         
-       ASoftwareForLearning.App.input1.setVisible(false);
+        ASoftwareForLearning.App.input1.setVisible(false);
         ASoftwareForLearning.App.homePage1.setVisible(true);
+        ASoftwareForLearning.pages.Home.statistics1.setVisible(false);
+        ASoftwareForLearning.pages.Home.titles1.setVisible(false);
+        ASoftwareForLearning.pages.Home.subjects1.setVisible(false);
+        ASoftwareForLearning.pages.Home.homePanel2.setVisible(true);
+        ASoftwareForLearning.pages.Home.questions1.setVisible(false);
          
     }//GEN-LAST:event_homeLabelMouseClicked
 

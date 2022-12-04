@@ -66,6 +66,7 @@
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="QuestionsUnderWelcomeMouseClicked"/>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="QuestionsUnderWelcomeMouseEntered"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="QuestionsUnderWelcomeActionPerformed"/>
       </Events>
     </Component>
     <Component class="ASoftwareForLearning.component.KButton" name="TitlesUnderWelcome">
@@ -74,6 +75,7 @@
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="TitlesUnderWelcomeMouseEntered"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="TitlesUnderWelcomeActionPerformed"/>
       </Events>
     </Component>
     <Component class="ASoftwareForLearning.component.KButton" name="SubjectsUnderWelcome">
@@ -82,6 +84,7 @@
       </Properties>
       <Events>
         <EventHandler event="mouseEntered" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="SubjectsUnderWelcomeMouseEntered"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="SubjectsUnderWelcomeActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>

@@ -4,6 +4,9 @@
  */
 package ASoftwareForLearning.pages;
 
+import java.awt.Color;
+import java.awt.Font;
+
 /**
  *
  * @author Zubai
@@ -15,6 +18,15 @@ public class Questions extends javax.swing.JPanel {
      */
     public Questions() {
         initComponents();
+        
+        
+        questionTable.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 12));
+        questionTable.setOpaque(false);
+        questionTable.getTableHeader().setBackground(Color.decode("#103783"));
+        questionTable.getTableHeader().setForeground(new Color(0, 0, 0));
+        questionTable.setRowHeight(25);
+        
+        
     }
 
     /**
@@ -28,12 +40,20 @@ public class Questions extends javax.swing.JPanel {
 
         panelBorder1 = new ASoftwareForLearning.swing.PanelBorder();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTable2 = new javax.swing.JTable();
+        questionTable = new javax.swing.JTable();
 
-        setMaximumSize(new java.awt.Dimension(940, 520));
-        setMinimumSize(new java.awt.Dimension(940, 520));
+        setMaximumSize(new java.awt.Dimension(910, 520));
+        setMinimumSize(new java.awt.Dimension(910, 520));
+        setPreferredSize(new java.awt.Dimension(910, 520));
 
-        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+        panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
+        panelBorder1.setMaximumSize(new java.awt.Dimension(910, 520));
+        panelBorder1.setMinimumSize(new java.awt.Dimension(910, 520));
+        panelBorder1.setPreferredSize(new java.awt.Dimension(910, 520));
+
+        questionTable.setBackground(new java.awt.Color(255, 255, 255));
+        questionTable.setForeground(new java.awt.Color(0, 0, 0));
+        questionTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
                 {null, null, null, null, null, null},
@@ -44,7 +64,13 @@ public class Questions extends javax.swing.JPanel {
                 "Question", "Answer", "Date Created", "Repetition", "Title ID", "Lapses"
             }
         ));
-        jScrollPane2.setViewportView(jTable2);
+        questionTable.setFocusable(false);
+        questionTable.setRowHeight(25);
+        questionTable.setSelectionBackground(new java.awt.Color(0, 97, 255));
+        questionTable.setSelectionForeground(new java.awt.Color(0, 0, 0));
+        questionTable.setShowHorizontalLines(true);
+        questionTable.getTableHeader().setReorderingAllowed(false);
+        jScrollPane2.setViewportView(questionTable);
 
         javax.swing.GroupLayout panelBorder1Layout = new javax.swing.GroupLayout(panelBorder1);
         panelBorder1.setLayout(panelBorder1Layout);
@@ -52,8 +78,8 @@ public class Questions extends javax.swing.JPanel {
             panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBorder1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 928, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 886, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelBorder1Layout.setVerticalGroup(
             panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -67,18 +93,21 @@ public class Questions extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelBorder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(panelBorder1, javax.swing.GroupLayout.PREFERRED_SIZE, 898, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelBorder1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelBorder1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable jTable2;
     private ASoftwareForLearning.swing.PanelBorder panelBorder1;
+    private javax.swing.JTable questionTable;
     // End of variables declaration//GEN-END:variables
 }

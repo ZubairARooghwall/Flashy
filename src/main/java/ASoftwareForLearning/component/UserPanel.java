@@ -131,8 +131,8 @@ public class UserPanel extends javax.swing.JPanel {
 
     private void addMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addMouseClicked
        
-        ASoftwareForLearning.App.homePage1.setVisible(false);
-       ASoftwareForLearning.App.input1.setVisible(true);
+        ASoftwareForLearning.App.input1.setVisible(true);
+         ASoftwareForLearning.App.homePage1.setVisible(false);
       
        
         

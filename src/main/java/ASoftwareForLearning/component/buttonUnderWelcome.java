@@ -67,6 +67,11 @@ public class buttonUnderWelcome extends javax.swing.JPanel {
                 QuestionsUnderWelcomeMouseEntered(evt);
             }
         });
+        QuestionsUnderWelcome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                QuestionsUnderWelcomeActionPerformed(evt);
+            }
+        });
 
         TitlesUnderWelcome.setText("Titles");
         TitlesUnderWelcome.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -74,11 +79,21 @@ public class buttonUnderWelcome extends javax.swing.JPanel {
                 TitlesUnderWelcomeMouseEntered(evt);
             }
         });
+        TitlesUnderWelcome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TitlesUnderWelcomeActionPerformed(evt);
+            }
+        });
 
         SubjectsUnderWelcome.setText("Subjects");
         SubjectsUnderWelcome.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 SubjectsUnderWelcomeMouseEntered(evt);
+            }
+        });
+        SubjectsUnderWelcome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SubjectsUnderWelcomeActionPerformed(evt);
             }
         });
 
@@ -134,6 +149,37 @@ public class buttonUnderWelcome extends javax.swing.JPanel {
         
         
     }//GEN-LAST:event_QuestionsUnderWelcomeMouseClicked
+
+    private void QuestionsUnderWelcomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_QuestionsUnderWelcomeActionPerformed
+        // TODO add your handling code here:
+        
+        ASoftwareForLearning.pages.Home.statistics1.setVisible(false);
+        ASoftwareForLearning.pages.Home.titles1.setVisible(false);
+        ASoftwareForLearning.pages.Home.subjects1.setVisible(false);
+        ASoftwareForLearning.pages.Home.homePanel2.setVisible(false);
+        ASoftwareForLearning.pages.Home.questions1.setVisible(true);
+        
+    }//GEN-LAST:event_QuestionsUnderWelcomeActionPerformed
+
+    private void TitlesUnderWelcomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TitlesUnderWelcomeActionPerformed
+        // TODO add your handling code here:
+         ASoftwareForLearning.pages.Home.statistics1.setVisible(false);
+        ASoftwareForLearning.pages.Home.titles1.setVisible(true);
+        ASoftwareForLearning.pages.Home.subjects1.setVisible(false);
+        ASoftwareForLearning.pages.Home.homePanel2.setVisible(false);
+        ASoftwareForLearning.pages.Home.questions1.setVisible(false);
+        
+        
+    }//GEN-LAST:event_TitlesUnderWelcomeActionPerformed
+
+    private void SubjectsUnderWelcomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubjectsUnderWelcomeActionPerformed
+        // TODO add your handling code here:
+         ASoftwareForLearning.pages.Home.statistics1.setVisible(false);
+        ASoftwareForLearning.pages.Home.titles1.setVisible(false);
+        ASoftwareForLearning.pages.Home.subjects1.setVisible(true);
+        ASoftwareForLearning.pages.Home.homePanel2.setVisible(false);
+        ASoftwareForLearning.pages.Home.questions1.setVisible(false);
+    }//GEN-LAST:event_SubjectsUnderWelcomeActionPerformed
 
     
     

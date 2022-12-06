@@ -16,6 +16,7 @@ public class Home extends javax.swing.JPanel {
         questions1.setVisible(false);
         subjects1.setVisible(false);
         titles1.setVisible(false);
+        studyButton.setVisible(true);
     }
 
     /**
@@ -29,7 +30,10 @@ public class Home extends javax.swing.JPanel {
 
         header1 = new ASoftwareForLearning.component.Header();
         notes1 = new ASoftwareForLearning.TODO.Notes();
+        addTitlePanel1 = new ASoftwareForLearning.component.AddTitlePanel();
         graph1 = new ASoftwareForLearning.component.Graph();
+        addSubjectPanel1 = new ASoftwareForLearning.component.addSubjectPanel();
+        studyButton = new ASoftwareForLearning.component.KButton();
         homePanel2 = new ASoftwareForLearning.component.HomePanel();
         statistics1 = new ASoftwareForLearning.pages.Statistics();
         questions1 = new ASoftwareForLearning.pages.Questions();
@@ -44,25 +48,35 @@ public class Home extends javax.swing.JPanel {
         add(header1);
         header1.setBounds(10, 10, 1190, 40);
 
-        notes1.setBackground(new java.awt.Color(51, 255, 255));
+        notes1.setBackground(new java.awt.Color(204, 204, 204));
+        notes1.setForeground(new java.awt.Color(0, 0, 0));
         notes1.setOpaque(false);
 
         javax.swing.GroupLayout notes1Layout = new javax.swing.GroupLayout(notes1);
         notes1.setLayout(notes1Layout);
         notes1Layout.setHorizontalGroup(
             notes1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, notes1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(addTitlePanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         notes1Layout.setVerticalGroup(
             notes1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, notes1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(addTitlePanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 238, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         add(notes1);
         notes1.setBounds(10, 60, 250, 250);
 
-        graph1.setBackground(new java.awt.Color(0, 0, 255));
+        graph1.setBackground(new java.awt.Color(204, 204, 204));
+        graph1.setForeground(new java.awt.Color(0, 0, 0));
+        graph1.setMaximumSize(new java.awt.Dimension(250, 250));
+        graph1.setMinimumSize(new java.awt.Dimension(250, 250));
         graph1.setOpaque(false);
+        graph1.setPreferredSize(new java.awt.Dimension(250, 250));
         graph1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 graph1MouseClicked(evt);
@@ -73,15 +87,36 @@ public class Home extends javax.swing.JPanel {
         graph1.setLayout(graph1Layout);
         graph1Layout.setHorizontalGroup(
             graph1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, graph1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(addSubjectPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         graph1Layout.setVerticalGroup(
             graph1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 258, Short.MAX_VALUE)
+            .addGroup(graph1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(addSubjectPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         add(graph1);
-        graph1.setBounds(10, 320, 250, 258);
+        graph1.setBounds(10, 320, 250, 260);
+
+        studyButton.setBackground(new java.awt.Color(255, 255, 255));
+        studyButton.setForeground(new java.awt.Color(0, 0, 0));
+        studyButton.setText("Study");
+        studyButton.setkBackGroundColor(new java.awt.Color(0, 204, 204));
+        studyButton.setkBorderRadius(25);
+        studyButton.setkForeGround(new java.awt.Color(0, 0, 0));
+        studyButton.setkHoverEndColor(new java.awt.Color(0, 204, 204));
+        studyButton.setkHoverStartColor(new java.awt.Color(0, 255, 0));
+        studyButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                studyButtonActionPerformed(evt);
+            }
+        });
+        add(studyButton);
+        studyButton.setBounds(270, 320, 650, 260);
 
         homePanel2.setOpaque(false);
         add(homePanel2);
@@ -90,25 +125,16 @@ public class Home extends javax.swing.JPanel {
         statistics1.setBounds(270, 60, 910, 520);
 
         questions1.setBackground(new java.awt.Color(255, 255, 255));
-        questions1.setMaximumSize(new java.awt.Dimension(910, 520));
-        questions1.setMinimumSize(new java.awt.Dimension(910, 520));
-        questions1.setPreferredSize(new java.awt.Dimension(910, 520));
         add(questions1);
         questions1.setBounds(270, 60, 910, 520);
 
         subjects1.setBackground(new java.awt.Color(255, 255, 255));
         subjects1.setForeground(new java.awt.Color(0, 0, 0));
-        subjects1.setMaximumSize(new java.awt.Dimension(910, 520));
-        subjects1.setMinimumSize(new java.awt.Dimension(910, 520));
-        subjects1.setPreferredSize(new java.awt.Dimension(910, 520));
         add(subjects1);
         subjects1.setBounds(270, 60, 910, 520);
 
         titles1.setBackground(new java.awt.Color(255, 255, 255));
         titles1.setForeground(new java.awt.Color(0, 0, 0));
-        titles1.setMaximumSize(new java.awt.Dimension(910, 520));
-        titles1.setMinimumSize(new java.awt.Dimension(910, 520));
-        titles1.setPreferredSize(new java.awt.Dimension(910, 520));
         add(titles1);
         titles1.setBounds(270, 60, 910, 520);
     }// </editor-fold>//GEN-END:initComponents
@@ -122,24 +148,32 @@ public class Home extends javax.swing.JPanel {
 
     private void graph1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_graph1MouseClicked
         // TODO add your handling code here:
-        titles1.setVisible(false);
-        subjects1.setVisible(false);
-        questions1.setVisible(false);
-        homePanel2.setVisible(false);
-        statistics1.setVisible(true);
+//        titles1.setVisible(false);
+//        subjects1.setVisible(false);
+//        questions1.setVisible(false);
+//        homePanel2.setVisible(false);
+//        statistics1.setVisible(true);
+//        studyButton.setVisible(false);
     }//GEN-LAST:event_graph1MouseClicked
+
+    private void studyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studyButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_studyButtonActionPerformed
 
     
     
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private ASoftwareForLearning.component.addSubjectPanel addSubjectPanel1;
+    private ASoftwareForLearning.component.AddTitlePanel addTitlePanel1;
     private ASoftwareForLearning.component.Graph graph1;
     private ASoftwareForLearning.component.Header header1;
     public static ASoftwareForLearning.component.HomePanel homePanel2;
     private ASoftwareForLearning.TODO.Notes notes1;
     public static ASoftwareForLearning.pages.Questions questions1;
     public static ASoftwareForLearning.pages.Statistics statistics1;
+    public static ASoftwareForLearning.component.KButton studyButton;
     public static ASoftwareForLearning.pages.Subjects subjects1;
     public static ASoftwareForLearning.pages.Titles titles1;
     // End of variables declaration//GEN-END:variables

@@ -4,6 +4,7 @@
  */
 package ASoftwareForLearning.pages;
 
+import ASoftwareForLearning.Database.buttonsUnderWelcomeDatabase;
 import java.awt.Color;
 import java.awt.Font;
 
@@ -25,6 +26,19 @@ public class Titles extends javax.swing.JPanel {
         TitlesTable.getTableHeader().setBackground(Color.decode("#103783"));
         TitlesTable.getTableHeader().setForeground(new Color(0, 0, 0));
         TitlesTable.setRowHeight(25);
+        TitlesTable.setFont(new Font("Segoe UI", Font.PLAIN, 15));
+        
+        buttonsUnderWelcomeDatabase titlesTableData = new buttonsUnderWelcomeDatabase();
+        titlesTableData.fillTitlesTable(TitlesTable);
+        
+        
+        
+        
+        
+        
+        
+        
+        
     }
 
     /**
@@ -93,7 +107,7 @@ public class Titles extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable TitlesTable;
+    public static javax.swing.JTable TitlesTable;
     private javax.swing.JScrollPane jScrollPane1;
     private ASoftwareForLearning.swing.PanelBorder panelBorder1;
     // End of variables declaration//GEN-END:variables

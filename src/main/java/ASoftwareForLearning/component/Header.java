@@ -155,6 +155,7 @@ public class Header extends javax.swing.JPanel {
         ASoftwareForLearning.pages.Home.subjects1.setVisible(false);
         ASoftwareForLearning.pages.Home.homePanel2.setVisible(true);
         ASoftwareForLearning.pages.Home.questions1.setVisible(false);
+        ASoftwareForLearning.pages.Home.studyButton.setVisible(true);
          
     }//GEN-LAST:event_homeLabelMouseClicked
 

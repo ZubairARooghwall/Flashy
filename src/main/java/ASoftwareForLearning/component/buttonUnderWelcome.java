@@ -157,6 +157,7 @@ public class buttonUnderWelcome extends javax.swing.JPanel {
         ASoftwareForLearning.pages.Home.titles1.setVisible(false);
         ASoftwareForLearning.pages.Home.subjects1.setVisible(false);
         ASoftwareForLearning.pages.Home.homePanel2.setVisible(false);
+        ASoftwareForLearning.pages.Home.studyButton.setVisible(false);
         ASoftwareForLearning.pages.Home.questions1.setVisible(true);
         
     }//GEN-LAST:event_QuestionsUnderWelcomeActionPerformed
@@ -167,6 +168,7 @@ public class buttonUnderWelcome extends javax.swing.JPanel {
         ASoftwareForLearning.pages.Home.titles1.setVisible(true);
         ASoftwareForLearning.pages.Home.subjects1.setVisible(false);
         ASoftwareForLearning.pages.Home.homePanel2.setVisible(false);
+        ASoftwareForLearning.pages.Home.studyButton.setVisible(false);
         ASoftwareForLearning.pages.Home.questions1.setVisible(false);
         
         
@@ -178,6 +180,7 @@ public class buttonUnderWelcome extends javax.swing.JPanel {
         ASoftwareForLearning.pages.Home.titles1.setVisible(false);
         ASoftwareForLearning.pages.Home.subjects1.setVisible(true);
         ASoftwareForLearning.pages.Home.homePanel2.setVisible(false);
+        ASoftwareForLearning.pages.Home.studyButton.setVisible(false);
         ASoftwareForLearning.pages.Home.questions1.setVisible(false);
     }//GEN-LAST:event_SubjectsUnderWelcomeActionPerformed
 

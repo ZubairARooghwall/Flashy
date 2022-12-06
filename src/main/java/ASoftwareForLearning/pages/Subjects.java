@@ -4,6 +4,7 @@
  */
 package ASoftwareForLearning.pages;
 
+import ASoftwareForLearning.Database.buttonsUnderWelcomeDatabase;
 import java.awt.Color;
 import java.awt.Font;
 
@@ -26,6 +27,12 @@ public class Subjects extends javax.swing.JPanel {
         SubjectsTable.getTableHeader().setBackground(Color.decode("#103783"));
         SubjectsTable.getTableHeader().setForeground(new Color(0, 0, 0));
         SubjectsTable.setRowHeight(25);
+        SubjectsTable.setFont(new Font("Segoe UI", Font.PLAIN, 15));
+        
+        buttonsUnderWelcomeDatabase subjectTableData = new buttonsUnderWelcomeDatabase();
+        subjectTableData.fillSubjectsTable(SubjectsTable);
+        
+        
     }
 
     /**
@@ -96,7 +103,7 @@ public class Subjects extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTable SubjectsTable;
+    public static javax.swing.JTable SubjectsTable;
     private javax.swing.JScrollPane jScrollPane1;
     private ASoftwareForLearning.swing.PanelBorder panelBorder1;
     // End of variables declaration//GEN-END:variables

@@ -2,32 +2,18 @@ package ASoftwareForLearning.Database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 
 public class DatabaseConnection {
-   Connection connection;
-    DriverManager driverManager;
-    ResultSet resultSet;
-    Statement statement;
-    PreparedStatement preparedStatement;
-
-    public DatabaseConnection() {
-        connectToDatabase();
-        
-        
-        
-    }
+   private Connection connection;
+   
     
     
-    
-    private void connectToDatabase(){
+    public Connection connectToDatabase(){
        try {
            
            try {
@@ -39,7 +25,7 @@ public class DatabaseConnection {
            }
            
            
-           connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/flashcard", "root", "133613");
+           connection = (Connection)DriverManager.getConnection("jdbc:mysql://localhost:3306/flashcard", "root", "133613");
 
            
        } catch (SQLException ex) {
@@ -50,7 +36,7 @@ public class DatabaseConnection {
         
         
         
-        
+        return connection;
         
     }
     

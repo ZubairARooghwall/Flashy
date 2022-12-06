@@ -4,18 +4,20 @@
  */
 package ASoftwareForLearning.pages;
 
+import ASoftwareForLearning.Database.buttonsUnderWelcomeDatabase;
 import java.awt.Color;
 import java.awt.Font;
 
-/**
- *
- * @author Zubai
- */
+
+
+  
+
 public class Questions extends javax.swing.JPanel {
 
-    /**
-     * Creates new form Questions
-     */
+  
+    
+    
+    
     public Questions() {
         initComponents();
         
@@ -25,6 +27,13 @@ public class Questions extends javax.swing.JPanel {
         questionTable.getTableHeader().setBackground(Color.decode("#103783"));
         questionTable.getTableHeader().setForeground(new Color(0, 0, 0));
         questionTable.setRowHeight(25);
+        questionTable.setFont(new Font("Segoe UI", Font.PLAIN, 15));
+        
+        buttonsUnderWelcomeDatabase questionTable = new buttonsUnderWelcomeDatabase();
+        
+        questionTable.fillQuestionTable(questionTable);
+        
+        
         
         
     }
@@ -108,6 +117,6 @@ public class Questions extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JScrollPane jScrollPane2;
     private ASoftwareForLearning.swing.PanelBorder panelBorder1;
-    private javax.swing.JTable questionTable;
+    public static javax.swing.JTable questionTable;
     // End of variables declaration//GEN-END:variables
 }

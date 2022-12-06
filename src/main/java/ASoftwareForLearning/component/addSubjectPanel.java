@@ -6,6 +6,7 @@
 package ASoftwareForLearning.component;
 
 import ASoftwareForLearning.Database.forTitleAndSubjectJList;
+import ASoftwareForLearning.pages.addSubject;
 
 /**
  *
@@ -47,6 +48,11 @@ public class addSubjectPanel extends javax.swing.JPanel {
         AddSubjectButton.setkHoverEndColor(new java.awt.Color(255, 102, 51));
         AddSubjectButton.setkHoverForeGround(new java.awt.Color(51, 255, 51));
         AddSubjectButton.setkHoverStartColor(new java.awt.Color(255, 102, 51));
+        AddSubjectButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AddSubjectButtonActionPerformed(evt);
+            }
+        });
 
         addSubjectLabel.setBackground(new java.awt.Color(255, 255, 255));
         addSubjectLabel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -83,12 +89,18 @@ public class addSubjectPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void AddSubjectButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddSubjectButtonActionPerformed
+        // TODO add your handling code here:
+        addSubject subjectFrame = new addSubject();
+        subjectFrame.setVisible(true);
+    }//GEN-LAST:event_AddSubjectButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private ASoftwareForLearning.component.KButton AddSubjectButton;
     private javax.swing.JLabel addSubjectLabel;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JList<String> subjectJList;
+    public static javax.swing.JList<String> subjectJList;
     // End of variables declaration//GEN-END:variables
 
 }

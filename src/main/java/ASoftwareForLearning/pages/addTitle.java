@@ -1,22 +1,25 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package ASoftwareForLearning.pages;
 
-/**
- *
- * @author Zubai
- */
+import ASoftwareForLearning.Database.ComboBox;
+import ASoftwareForLearning.Database.addTitleFromFrame;
+import javax.swing.JOptionPane;
+
 public class addTitle extends javax.swing.JFrame {
 
-    /**
-     * Creates new form addTitle
-     */
+    ComboBox subjectBox = new ComboBox();
+    
+    
     public addTitle() {
         initComponents();
         
         TitleAddTxtField.setLabelText("Title");
+        
+        //for comboBox
+        subjectBox.fillSubjectForTitle(comboboxForTitles);
+        
+        comboboxForTitles.setLabeText("Subject");
+        
         
     }
 
@@ -30,9 +33,11 @@ public class addTitle extends javax.swing.JFrame {
     private void initComponents() {
 
         panelBorder1 = new ASoftwareForLearning.swing.PanelBorder();
-        CloseButtonAddTitle = new javax.swing.JButton();
-        addTitleButton = new javax.swing.JButton();
+        addTitleButton = new ASoftwareForLearning.component.KButton();
+        CloseButtonAddTitle = new ASoftwareForLearning.component.KButton();
         TitleAddTxtField = new ASoftwareForLearning.InputPageComponents.TextField();
+        comboboxForTitles = new ASoftwareForLearning.component.Combobox();
+        TitleSuccess = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -40,12 +45,43 @@ public class addTitle extends javax.swing.JFrame {
         panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
         panelBorder1.setForeground(new java.awt.Color(0, 0, 0));
 
-        CloseButtonAddTitle.setText("Cancel");
-
         addTitleButton.setText("Add");
+        addTitleButton.setkBackGroundColor(new java.awt.Color(0, 255, 255));
+        addTitleButton.setkHoverEndColor(new java.awt.Color(0, 255, 255));
+        addTitleButton.setkHoverForeGround(new java.awt.Color(0, 0, 0));
+        addTitleButton.setkHoverStartColor(new java.awt.Color(0, 255, 0));
+        addTitleButton.setkSelectedColor(new java.awt.Color(102, 102, 102));
+        addTitleButton.setPreferredSize(new java.awt.Dimension(72, 23));
+        addTitleButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addTitleButtonActionPerformed(evt);
+            }
+        });
+
+        CloseButtonAddTitle.setText("Cancel");
+        CloseButtonAddTitle.setkBackGroundColor(new java.awt.Color(0, 255, 255));
+        CloseButtonAddTitle.setkHoverEndColor(new java.awt.Color(0, 255, 255));
+        CloseButtonAddTitle.setkHoverForeGround(new java.awt.Color(51, 51, 51));
+        CloseButtonAddTitle.setkHoverStartColor(new java.awt.Color(0, 255, 0));
+        CloseButtonAddTitle.setkSelectedColor(new java.awt.Color(102, 102, 102));
+        CloseButtonAddTitle.setPreferredSize(new java.awt.Dimension(72, 23));
+        CloseButtonAddTitle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CloseButtonAddTitleActionPerformed(evt);
+            }
+        });
 
         TitleAddTxtField.setBackground(new java.awt.Color(255, 255, 255));
         TitleAddTxtField.setForeground(new java.awt.Color(0, 0, 0));
+
+        comboboxForTitles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboboxForTitlesActionPerformed(evt);
+            }
+        });
+
+        TitleSuccess.setBackground(new java.awt.Color(255, 255, 255));
+        TitleSuccess.setForeground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout panelBorder1Layout = new javax.swing.GroupLayout(panelBorder1);
         panelBorder1.setLayout(panelBorder1Layout);
@@ -55,10 +91,14 @@ public class addTitle extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(TitleAddTxtField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(comboboxForTitles, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBorder1Layout.createSequentialGroup()
+                        .addComponent(CloseButtonAddTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                        .addComponent(addTitleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(panelBorder1Layout.createSequentialGroup()
-                        .addComponent(CloseButtonAddTitle)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
-                        .addComponent(addTitleButton)))
+                        .addComponent(TitleSuccess)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         panelBorder1Layout.setVerticalGroup(
@@ -66,10 +106,14 @@ public class addTitle extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBorder1Layout.createSequentialGroup()
                 .addGap(57, 57, 57)
                 .addComponent(TitleAddTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addComponent(comboboxForTitles, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 96, Short.MAX_VALUE)
+                .addComponent(TitleSuccess)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CloseButtonAddTitle)
-                    .addComponent(addTitleButton))
+                    .addComponent(CloseButtonAddTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addTitleButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -87,6 +131,30 @@ public class addTitle extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void comboboxForTitlesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboboxForTitlesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboboxForTitlesActionPerformed
+
+    private void addTitleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTitleButtonActionPerformed
+        // TODO add your handling code here:
+        addTitleFromFrame add = new addTitleFromFrame();
+        
+        if(TitleAddTxtField.getText() == ""){
+            JOptionPane.showMessageDialog(null, "Enter a valid name");
+        }else{
+        
+        add.addTitle(TitleAddTxtField.getText(), comboboxForTitles.getSelectedItem().toString());
+        
+        
+        }
+        
+    }//GEN-LAST:event_addTitleButtonActionPerformed
+
+    private void CloseButtonAddTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CloseButtonAddTitleActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_CloseButtonAddTitleActionPerformed
 
     /**
      * @param args the command line arguments
@@ -124,9 +192,11 @@ public class addTitle extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton CloseButtonAddTitle;
+    private ASoftwareForLearning.component.KButton CloseButtonAddTitle;
     private ASoftwareForLearning.InputPageComponents.TextField TitleAddTxtField;
-    private javax.swing.JButton addTitleButton;
+    public static javax.swing.JLabel TitleSuccess;
+    private ASoftwareForLearning.component.KButton addTitleButton;
+    private ASoftwareForLearning.component.Combobox comboboxForTitles;
     private ASoftwareForLearning.swing.PanelBorder panelBorder1;
     // End of variables declaration//GEN-END:variables
 }

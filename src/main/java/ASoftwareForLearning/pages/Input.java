@@ -5,6 +5,7 @@
  */
 package ASoftwareForLearning.pages;
 
+import ASoftwareForLearning.Database.ComboBox;
 import java.awt.Color;
 import javax.swing.BorderFactory;
 import javax.swing.plaf.basic.BasicInternalFrameUI;
@@ -12,7 +13,8 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 public class Input extends javax.swing.JInternalFrame {
 
-  
+    ComboBox titleBox = new ComboBox();
+    
     public Input() {
         initComponents();
         
@@ -25,8 +27,11 @@ public class Input extends javax.swing.JInternalFrame {
         BasicInternalFrameUI bi  = (BasicInternalFrameUI)this.getUI();
         bi.setNorthPane(null);
         
-        //for text field and area
+        //for combo box
+        titleBox.fillTitleForQuestion(comboForQuestions);
         
+        //change the label of titles
+        comboForQuestions.setLabeText("Title");
         
         
         
@@ -59,6 +64,7 @@ public class Input extends javax.swing.JInternalFrame {
         textArea1 = new ASoftwareForLearning.InputPageComponents.TextArea();
         header1 = new ASoftwareForLearning.component.Header();
         addButton = new ASoftwareForLearning.component.KButton();
+        comboForQuestions = new ASoftwareForLearning.component.Combobox();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setMaximumSize(new java.awt.Dimension(1200, 600));
@@ -103,7 +109,8 @@ public class Input extends javax.swing.JInternalFrame {
                         .addComponent(jLabel1)
                         .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(textField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(textAreaScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 1055, Short.MAX_VALUE))))
+                            .addComponent(textAreaScroll1, javax.swing.GroupLayout.DEFAULT_SIZE, 1055, Short.MAX_VALUE))
+                        .addComponent(comboForQuestions, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(81, Short.MAX_VALUE))
             .addGroup(panelBorder1Layout.createSequentialGroup()
                 .addContainerGap()
@@ -115,7 +122,9 @@ public class Input extends javax.swing.JInternalFrame {
             .addGroup(panelBorder1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(header1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addComponent(comboForQuestions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(textAreaScroll1, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -141,6 +150,7 @@ public class Input extends javax.swing.JInternalFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private ASoftwareForLearning.component.KButton addButton;
+    private ASoftwareForLearning.component.Combobox comboForQuestions;
     private ASoftwareForLearning.component.Header header1;
     private javax.swing.JLabel jLabel1;
     private ASoftwareForLearning.swing.PanelBorder panelBorder1;

@@ -1,5 +1,6 @@
 package ASoftwareForLearning.Database;
 
+import com.formdev.flatlaf.FlatLaf;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -25,7 +26,7 @@ public class buttonsUnderWelcomeDatabase {
             while(rs.next()){
                 tableModel.addRow(new String[]{ rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(7), rs.getString(12), rs.getString(9)  } );
                 
-            }   
+            }
             
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "could not load questions");
@@ -42,7 +43,7 @@ public class buttonsUnderWelcomeDatabase {
             tableModel = (DefaultTableModel) ASoftwareForLearning.pages.Titles.TitlesTable.getModel();
             tableModel.setRowCount(0);
             while(rs.next()){
-                tableModel.addRow(new String[]{ rs.getString(2), rs.getString(3), rs.getString(5), rs.getString(6) } );
+                tableModel.addRow(new String[]{ rs.getString(1), rs.getString(2), rs.getString(3) } );
             }   
             
         } catch (Exception e) {
@@ -60,7 +61,7 @@ public class buttonsUnderWelcomeDatabase {
             tableModel = (DefaultTableModel) ASoftwareForLearning.pages.Subjects.SubjectsTable.getModel();
             tableModel.setRowCount(0);
             while(rs.next()){
-                tableModel.addRow(new String[]{ rs.getString(2), rs.getString(3) } );
+                tableModel.addRow(new String[]{ rs.getString(1), rs.getString(2) } );
             }   
             
         } catch (Exception e) {

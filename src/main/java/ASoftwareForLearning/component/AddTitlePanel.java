@@ -99,7 +99,8 @@ public class AddTitlePanel extends javax.swing.JPanel {
     private void AddTitleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddTitleButtonActionPerformed
         // TODO add your handling code here:
         
-//        addTitle titleframe = new addTitle();
+        addTitle titleframe = new addTitle();
+        titleframe.setVisible(true);
         
     }//GEN-LAST:event_AddTitleButtonActionPerformed
 
@@ -114,7 +115,7 @@ public class AddTitlePanel extends javax.swing.JPanel {
     private ASoftwareForLearning.component.KButton AddTitleButton;
     private javax.swing.JLabel addTitleLabel;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JList<String> titleJList;
+    public static javax.swing.JList<String> titleJList;
     // End of variables declaration//GEN-END:variables
 
     /**

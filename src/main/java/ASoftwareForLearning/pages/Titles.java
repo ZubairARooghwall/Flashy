@@ -62,13 +62,13 @@ public class Titles extends javax.swing.JPanel {
         TitlesTable.setForeground(new java.awt.Color(0, 0, 0));
         TitlesTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Title Name", "Date Created", "Parent Title", "Subject ID"
+                "Title Name", "Date Created", "Subject Name"
             }
         ));
         TitlesTable.setSelectionBackground(new java.awt.Color(0, 97, 255));

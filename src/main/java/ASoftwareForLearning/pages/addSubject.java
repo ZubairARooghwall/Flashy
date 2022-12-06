@@ -4,6 +4,8 @@
  */
 package ASoftwareForLearning.pages;
 
+import ASoftwareForLearning.Database.addSubjectFromFrame;
+
 /**
  *
  * @author Zubai
@@ -30,9 +32,10 @@ public class addSubject extends javax.swing.JFrame {
     private void initComponents() {
 
         panelBorder1 = new ASoftwareForLearning.swing.PanelBorder();
-        CloseButtonAddTitle = new javax.swing.JButton();
-        addTitleButton = new javax.swing.JButton();
         TitleAddTxtField = new ASoftwareForLearning.InputPageComponents.TextField();
+        addTitleButton = new ASoftwareForLearning.component.KButton();
+        CloseButtonAddTitle = new ASoftwareForLearning.component.KButton();
+        subjectSuccess = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -40,12 +43,36 @@ public class addSubject extends javax.swing.JFrame {
         panelBorder1.setBackground(new java.awt.Color(255, 255, 255));
         panelBorder1.setForeground(new java.awt.Color(0, 0, 0));
 
-        CloseButtonAddTitle.setText("Cancel");
-
-        addTitleButton.setText("Add");
-
         TitleAddTxtField.setBackground(new java.awt.Color(255, 255, 255));
         TitleAddTxtField.setForeground(new java.awt.Color(0, 0, 0));
+
+        addTitleButton.setText("Add");
+        addTitleButton.setkBackGroundColor(new java.awt.Color(0, 255, 255));
+        addTitleButton.setkHoverEndColor(new java.awt.Color(0, 255, 255));
+        addTitleButton.setkHoverForeGround(new java.awt.Color(0, 0, 0));
+        addTitleButton.setkHoverStartColor(new java.awt.Color(0, 255, 0));
+        addTitleButton.setkSelectedColor(new java.awt.Color(102, 102, 102));
+        addTitleButton.setPreferredSize(new java.awt.Dimension(72, 23));
+        addTitleButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addTitleButtonActionPerformed(evt);
+            }
+        });
+
+        CloseButtonAddTitle.setText("Cancel");
+        CloseButtonAddTitle.setkBackGroundColor(new java.awt.Color(0, 255, 255));
+        CloseButtonAddTitle.setkHoverEndColor(new java.awt.Color(0, 255, 255));
+        CloseButtonAddTitle.setkHoverForeGround(new java.awt.Color(51, 51, 51));
+        CloseButtonAddTitle.setkHoverStartColor(new java.awt.Color(0, 255, 0));
+        CloseButtonAddTitle.setPreferredSize(new java.awt.Dimension(72, 23));
+        CloseButtonAddTitle.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CloseButtonAddTitleActionPerformed(evt);
+            }
+        });
+
+        subjectSuccess.setBackground(new java.awt.Color(255, 255, 255));
+        subjectSuccess.setForeground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout panelBorder1Layout = new javax.swing.GroupLayout(panelBorder1);
         panelBorder1.setLayout(panelBorder1Layout);
@@ -56,9 +83,12 @@ public class addSubject extends javax.swing.JFrame {
                 .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(TitleAddTxtField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(panelBorder1Layout.createSequentialGroup()
-                        .addComponent(CloseButtonAddTitle)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
-                        .addComponent(addTitleButton)))
+                        .addComponent(CloseButtonAddTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                        .addComponent(addTitleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelBorder1Layout.createSequentialGroup()
+                        .addComponent(subjectSuccess)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         panelBorder1Layout.setVerticalGroup(
@@ -66,10 +96,12 @@ public class addSubject extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBorder1Layout.createSequentialGroup()
                 .addGap(57, 57, 57)
                 .addComponent(TitleAddTxtField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 161, Short.MAX_VALUE)
+                .addComponent(subjectSuccess)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(CloseButtonAddTitle)
-                    .addComponent(addTitleButton))
+                    .addComponent(addTitleButton, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(CloseButtonAddTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -87,6 +119,23 @@ public class addSubject extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void CloseButtonAddTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CloseButtonAddTitleActionPerformed
+        // TODO add your handling code here:
+        dispose();
+    }//GEN-LAST:event_CloseButtonAddTitleActionPerformed
+
+    private void addTitleButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTitleButtonActionPerformed
+        // TODO add your handling code here:
+        addSubjectFromFrame add = new addSubjectFromFrame();
+        String Subject = TitleAddTxtField.getText();
+        add.addSubject(Subject);
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_addTitleButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,9 +174,10 @@ public class addSubject extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton CloseButtonAddTitle;
+    private ASoftwareForLearning.component.KButton CloseButtonAddTitle;
     private ASoftwareForLearning.InputPageComponents.TextField TitleAddTxtField;
-    private javax.swing.JButton addTitleButton;
+    private ASoftwareForLearning.component.KButton addTitleButton;
     private ASoftwareForLearning.swing.PanelBorder panelBorder1;
+    public static javax.swing.JLabel subjectSuccess;
     // End of variables declaration//GEN-END:variables
 }

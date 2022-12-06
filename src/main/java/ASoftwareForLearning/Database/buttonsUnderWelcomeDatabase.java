@@ -14,7 +14,7 @@ public class buttonsUnderWelcomeDatabase {
     ResultSet rs = null;
     Statement stmt = null;
     
-    public void fillQuestionTable(buttonsUnderWelcomeDatabase jTable){
+    public void fillQuestionTable(JTable jTable){
         try {
             DefaultTableModel tableModel = new DefaultTableModel();
             conn = database.connectToDatabase();
@@ -24,7 +24,7 @@ public class buttonsUnderWelcomeDatabase {
             tableModel = (DefaultTableModel) ASoftwareForLearning.pages.Questions.questionTable.getModel();
             tableModel.setRowCount(0);
             while(rs.next()){
-                tableModel.addRow(new String[]{ rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(7), rs.getString(12), rs.getString(9)  } );
+                tableModel.addRow(new String[]{ rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6)  } );
                 
             }
             

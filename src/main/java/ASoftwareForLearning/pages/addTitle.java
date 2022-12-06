@@ -149,6 +149,9 @@ public class addTitle extends javax.swing.JFrame {
         
         }
         
+        TitleAddTxtField.setText("");
+        TitleAddTxtField.requestFocus();
+        
     }//GEN-LAST:event_addTitleButtonActionPerformed
 
     private void CloseButtonAddTitleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CloseButtonAddTitleActionPerformed

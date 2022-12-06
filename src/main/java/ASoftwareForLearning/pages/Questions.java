@@ -31,7 +31,7 @@ public class Questions extends javax.swing.JPanel {
         
         buttonsUnderWelcomeDatabase questionTable = new buttonsUnderWelcomeDatabase();
         
-        questionTable.fillQuestionTable(questionTable);
+        questionTable.fillQuestionTable(Questions.questionTable);
         
         
         
@@ -64,13 +64,13 @@ public class Questions extends javax.swing.JPanel {
         questionTable.setForeground(new java.awt.Color(0, 0, 0));
         questionTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Question", "Answer", "Date Created", "Repetition", "Title ID", "Lapses"
+                "Question", "Answer", "Date Created", "Repetition", "Title Name"
             }
         ));
         questionTable.setFocusable(false);

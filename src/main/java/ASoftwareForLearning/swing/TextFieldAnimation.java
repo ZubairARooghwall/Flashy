@@ -1,5 +1,6 @@
 package ASoftwareForLearning.swing;
 
+import ASoftwareForLearning.Database.search;
 import java.awt.AlphaComposite;
 import java.awt.Color;
 import java.awt.Cursor;
@@ -71,6 +72,7 @@ public class TextFieldAnimation extends JTextField {
     private Thread thread;
     private final Animator animator;
     
+    
     public TextFieldAnimation() {
         super.setBackground(new Color(255, 255, 255, 0));
         setOpaque(false);
@@ -106,6 +108,7 @@ public class TextFieldAnimation extends JTextField {
                 
                 if(SwingUtilities.isLeftMouseButton(e)){
                     if(checkMouseOver(e.getPoint())){
+            
                         if(!animator.isRunning()){
                             
                             if(show){

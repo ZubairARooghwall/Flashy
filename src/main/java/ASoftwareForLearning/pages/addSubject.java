@@ -131,8 +131,8 @@ public class addSubject extends javax.swing.JFrame {
         String Subject = TitleAddTxtField.getText();
         add.addSubject(Subject);
         
-        
-        
+        TitleAddTxtField.setText("");
+        TitleAddTxtField.requestFocus();
         
         
     }//GEN-LAST:event_addTitleButtonActionPerformed

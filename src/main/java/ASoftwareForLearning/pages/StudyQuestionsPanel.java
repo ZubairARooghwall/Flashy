@@ -4,8 +4,12 @@
  */
 package ASoftwareForLearning.pages;
 
+import ASoftwareForLearning.Database.forStudying;
 import java.awt.Color;
 import java.awt.Cursor;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -28,6 +32,28 @@ public class StudyQuestionsPanel extends javax.swing.JPanel {
         answerReviewedLabel.setVisible(false);
         
         
+        next.setVisible(false);
+        
+        
+        try {
+            studyDatabase.fillStudyQuestionLabels(questionReviewedLabel);
+        } catch (SQLException ex) {
+            Logger.getLogger(StudyQuestionsPanel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        try {
+            studyDatabase.fillStudyAnswerLabels(answerReviewedLabel);
+        } catch (SQLException ex) {
+            Logger.getLogger(StudyQuestionsPanel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        
+        
+        
+        
+        
+        
     }
 
     /**
@@ -44,6 +70,7 @@ public class StudyQuestionsPanel extends javax.swing.JPanel {
         answerReviewedLabel = new javax.swing.JLabel();
         showAnswer = new ASoftwareForLearning.component.KButton();
         HomeButton = new javax.swing.JLabel();
+        next = new ASoftwareForLearning.component.KButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setForeground(new java.awt.Color(0, 0, 0));
@@ -83,6 +110,13 @@ public class StudyQuestionsPanel extends javax.swing.JPanel {
             }
         });
 
+        next.setText("Next");
+        next.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nextActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout panelBorder1Layout = new javax.swing.GroupLayout(panelBorder1);
         panelBorder1.setLayout(panelBorder1Layout);
         panelBorder1Layout.setHorizontalGroup(
@@ -100,8 +134,10 @@ public class StudyQuestionsPanel extends javax.swing.JPanel {
                             .addComponent(answerReviewedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 986, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(166, 166, 166))))
             .addGroup(panelBorder1Layout.createSequentialGroup()
-                .addGap(460, 460, 460)
+                .addGap(362, 362, 362)
                 .addComponent(showAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         panelBorder1Layout.setVerticalGroup(
@@ -114,7 +150,9 @@ public class StudyQuestionsPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addComponent(answerReviewedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(37, 37, 37)
-                .addComponent(showAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(showAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(next, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47))
         );
 
@@ -158,14 +196,50 @@ public class StudyQuestionsPanel extends javax.swing.JPanel {
     private void showAnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showAnswerActionPerformed
         // TODO add your handling code here:
         answerReviewedLabel.setVisible(true);
+        next.setVisible(true);
+        showAnswer.setVisible(false);
         
         
     }//GEN-LAST:event_showAnswerActionPerformed
+
+    forStudying studyDatabase = new forStudying();
+    
+    private void nextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextActionPerformed
+        
+        next.setVisible(false);
+        showAnswer.setVisible(true);
+        while(true){
+        
+        try {
+            studyDatabase.fillStudyQuestionLabels(questionReviewedLabel);
+        } catch (SQLException ex) {
+            Logger.getLogger(StudyQuestionsPanel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        try {
+            studyDatabase.fillStudyAnswerLabels(answerReviewedLabel);
+        } catch (SQLException ex) {
+            Logger.getLogger(StudyQuestionsPanel.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+        
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_nextActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel HomeButton;
     private javax.swing.JLabel answerReviewedLabel;
+    public static ASoftwareForLearning.component.KButton next;
     public static ASoftwareForLearning.swing.PanelBorder panelBorder1;
     private javax.swing.JLabel questionReviewedLabel;
     private ASoftwareForLearning.component.KButton showAnswer;

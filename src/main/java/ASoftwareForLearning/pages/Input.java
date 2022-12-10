@@ -193,7 +193,7 @@ public class Input extends javax.swing.JInternalFrame {
     private ASoftwareForLearning.InputPageComponents.TextArea AnswerInputTxt;
     private ASoftwareForLearning.InputPageComponents.TextField QuestionInputTxt;
     private ASoftwareForLearning.component.KButton addButton;
-    private ASoftwareForLearning.component.Combobox comboForQuestions;
+    public static ASoftwareForLearning.component.Combobox comboForQuestions;
     private ASoftwareForLearning.component.Header header1;
     private javax.swing.JLabel jLabel1;
     private ASoftwareForLearning.swing.PanelBorder panelBorder1;

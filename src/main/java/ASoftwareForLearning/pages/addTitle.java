@@ -151,6 +151,11 @@ public class addTitle extends javax.swing.JFrame {
         
         }
         
+        new ComboBox().fillTitleForQuestion(ASoftwareForLearning.pages.Input.comboForQuestions);
+        
+        
+        
+        
         TitleAddTxtField.setText("");
         TitleAddTxtField.requestFocus();
         

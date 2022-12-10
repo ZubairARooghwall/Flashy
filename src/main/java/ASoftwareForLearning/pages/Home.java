@@ -9,6 +9,7 @@ import ASoftwareForLearning.App;
 
 public class Home extends javax.swing.JPanel {
 
+    Study study = new Study();
  
     public Home() {
         initComponents();
@@ -28,7 +29,6 @@ public class Home extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        header1 = new ASoftwareForLearning.component.Header();
         notes1 = new ASoftwareForLearning.TODO.Notes();
         addTitlePanel1 = new ASoftwareForLearning.component.AddTitlePanel();
         graph1 = new ASoftwareForLearning.component.Graph();
@@ -39,14 +39,13 @@ public class Home extends javax.swing.JPanel {
         questions1 = new ASoftwareForLearning.pages.Questions();
         subjects1 = new ASoftwareForLearning.pages.Subjects();
         titles1 = new ASoftwareForLearning.pages.Titles();
+        header1 = new ASoftwareForLearning.component.Header();
 
         setMaximumSize(new java.awt.Dimension(1190, 590));
         setMinimumSize(new java.awt.Dimension(1190, 590));
         setOpaque(false);
         setPreferredSize(new java.awt.Dimension(1190, 590));
         setLayout(null);
-        add(header1);
-        header1.setBounds(10, 10, 1190, 40);
 
         notes1.setBackground(new java.awt.Color(204, 204, 204));
         notes1.setForeground(new java.awt.Color(0, 0, 0));
@@ -137,6 +136,8 @@ public class Home extends javax.swing.JPanel {
         titles1.setForeground(new java.awt.Color(0, 0, 0));
         add(titles1);
         titles1.setBounds(270, 60, 910, 520);
+        add(header1);
+        header1.setBounds(10, 10, 1180, 40);
     }// </editor-fold>//GEN-END:initComponents
 
     private void graph1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_graph1MousePressed
@@ -158,6 +159,15 @@ public class Home extends javax.swing.JPanel {
 
     private void studyButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_studyButtonActionPerformed
         // TODO add your handling code here:
+        
+        ASoftwareForLearning.App.study1.setVisible(true);
+        ASoftwareForLearning.App.homePage1.setVisible(false);
+        
+       
+        
+       
+        
+        
     }//GEN-LAST:event_studyButtonActionPerformed
 
     
@@ -168,7 +178,7 @@ public class Home extends javax.swing.JPanel {
     private ASoftwareForLearning.component.addSubjectPanel addSubjectPanel1;
     private ASoftwareForLearning.component.AddTitlePanel addTitlePanel1;
     private ASoftwareForLearning.component.Graph graph1;
-    private ASoftwareForLearning.component.Header header1;
+    public static ASoftwareForLearning.component.Header header1;
     public static ASoftwareForLearning.component.HomePanel homePanel2;
     private ASoftwareForLearning.TODO.Notes notes1;
     public static ASoftwareForLearning.pages.Questions questions1;

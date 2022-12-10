@@ -59,11 +59,13 @@ public class addTitle extends javax.swing.JFrame {
         });
 
         CloseButtonAddTitle.setText("Cancel");
-        CloseButtonAddTitle.setkBackGroundColor(new java.awt.Color(0, 255, 255));
+        CloseButtonAddTitle.setkBackGroundColor(new java.awt.Color(204, 204, 0));
+        CloseButtonAddTitle.setkEndColor(new java.awt.Color(204, 204, 0));
         CloseButtonAddTitle.setkHoverEndColor(new java.awt.Color(0, 255, 255));
         CloseButtonAddTitle.setkHoverForeGround(new java.awt.Color(51, 51, 51));
         CloseButtonAddTitle.setkHoverStartColor(new java.awt.Color(0, 255, 0));
         CloseButtonAddTitle.setkSelectedColor(new java.awt.Color(102, 102, 102));
+        CloseButtonAddTitle.setkStartColor(new java.awt.Color(204, 204, 0));
         CloseButtonAddTitle.setPreferredSize(new java.awt.Dimension(72, 23));
         CloseButtonAddTitle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

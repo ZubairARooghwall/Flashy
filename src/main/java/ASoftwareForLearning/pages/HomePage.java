@@ -76,7 +76,7 @@ public class HomePage extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public ASoftwareForLearning.pages.Home home1;
+    public static ASoftwareForLearning.pages.Home home1;
     private ASoftwareForLearning.swing.PanelBorder panelBorder2;
     // End of variables declaration//GEN-END:variables
 }

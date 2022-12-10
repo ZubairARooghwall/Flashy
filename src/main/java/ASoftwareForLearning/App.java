@@ -32,9 +32,10 @@ public class App extends javax.swing.JFrame {
         //for background and borders to be round
         setBackground(new Color(0, 0, 0, 0));
         //to make the frame movable
-       // homePage2.home1.header1.initMoving(App.this);
+         homePage1.home1.header1.initMoving(App.this);
         //for making the input invisible
         input1.setVisible(false);
+        study1.setVisible(false);
         
         
         
@@ -58,6 +59,7 @@ public class App extends javax.swing.JFrame {
 
         homePage1 = new ASoftwareForLearning.pages.HomePage();
         input1 = new ASoftwareForLearning.pages.Input();
+        study1 = new ASoftwareForLearning.pages.Study();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -72,7 +74,11 @@ public class App extends javax.swing.JFrame {
 
         input1.setVisible(true);
         getContentPane().add(input1);
-        input1.setBounds(0, 0, 1200, 590);
+        input1.setBounds(0, 0, 1200, 600);
+
+        study1.setVisible(true);
+        getContentPane().add(study1);
+        study1.setBounds(0, 0, 1190, 590);
 
         pack();
         setLocationRelativeTo(null);
@@ -126,5 +132,6 @@ public class App extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static ASoftwareForLearning.pages.HomePage homePage1;
     public static ASoftwareForLearning.pages.Input input1;
+    public static ASoftwareForLearning.pages.Study study1;
     // End of variables declaration//GEN-END:variables
 }

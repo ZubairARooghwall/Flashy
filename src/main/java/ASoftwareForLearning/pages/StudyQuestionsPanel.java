@@ -25,6 +25,8 @@ public class StudyQuestionsPanel extends javax.swing.JPanel {
         showAnswer.kHoverStartColor = Color.decode("#103783");
         showAnswer.kHoverEndColor = Color.decode("#0061ff");
         
+        answerReviewedLabel.setVisible(false);
+        
         
     }
 
@@ -47,6 +49,7 @@ public class StudyQuestionsPanel extends javax.swing.JPanel {
         setForeground(new java.awt.Color(0, 0, 0));
         setMaximumSize(new java.awt.Dimension(1190, 590));
         setMinimumSize(new java.awt.Dimension(1190, 590));
+        setPreferredSize(new java.awt.Dimension(1190, 590));
 
         panelBorder1.setMaximumSize(new java.awt.Dimension(1190, 590));
         panelBorder1.setMinimumSize(new java.awt.Dimension(1190, 590));
@@ -64,6 +67,11 @@ public class StudyQuestionsPanel extends javax.swing.JPanel {
         answerReviewedLabel.setText("AnswerReviewLabel");
 
         showAnswer.setText("Show Answer");
+        showAnswer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showAnswerActionPerformed(evt);
+            }
+        });
 
         HomeButton.setIcon(new javax.swing.ImageIcon("C:\\Projects\\UniversityProject\\ASoftwareForLearning\\app\\src\\main\\java\\ASoftwareForLearning\\icon\\home_Outlined.png")); // NOI18N
         HomeButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -80,33 +88,34 @@ public class StudyQuestionsPanel extends javax.swing.JPanel {
         panelBorder1Layout.setHorizontalGroup(
             panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBorder1Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(questionReviewedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 986, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelBorder1Layout.createSequentialGroup()
-                                .addGap(98, 98, 98)
-                                .addComponent(answerReviewedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 986, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(panelBorder1Layout.createSequentialGroup()
-                                .addGap(464, 464, 464)
-                                .addComponent(showAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(panelBorder1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(HomeButton)))
-                .addContainerGap(106, Short.MAX_VALUE))
+                        .addComponent(HomeButton)
+                        .addContainerGap(1144, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBorder1Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(questionReviewedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 986, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(answerReviewedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 986, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(166, 166, 166))))
+            .addGroup(panelBorder1Layout.createSequentialGroup()
+                .addGap(460, 460, 460)
+                .addComponent(showAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         panelBorder1Layout.setVerticalGroup(
             panelBorder1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBorder1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(HomeButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(questionReviewedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(answerReviewedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
+                .addComponent(answerReviewedLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 222, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(37, 37, 37)
                 .addComponent(showAnswer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(47, 47, 47))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -125,21 +134,39 @@ public class StudyQuestionsPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         
        setCursor(new Cursor(Cursor.HAND_CURSOR));
+       
+       
     }//GEN-LAST:event_HomeButtonMouseEntered
 
     private void HomeButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomeButtonMouseClicked
         // TODO add your handling code here:
         
         
+       
+        ASoftwareForLearning.App.study1.setVisible(false);
+        ASoftwareForLearning.App.homePage1.setVisible(true);
+      
+        
+        
+        
+        
+        
         
         
     }//GEN-LAST:event_HomeButtonMouseClicked
+
+    private void showAnswerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showAnswerActionPerformed
+        // TODO add your handling code here:
+        answerReviewedLabel.setVisible(true);
+        
+        
+    }//GEN-LAST:event_showAnswerActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel HomeButton;
     private javax.swing.JLabel answerReviewedLabel;
-    private ASoftwareForLearning.swing.PanelBorder panelBorder1;
+    public static ASoftwareForLearning.swing.PanelBorder panelBorder1;
     private javax.swing.JLabel questionReviewedLabel;
     private ASoftwareForLearning.component.KButton showAnswer;
     // End of variables declaration//GEN-END:variables
